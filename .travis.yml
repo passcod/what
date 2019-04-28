@@ -16,7 +16,7 @@ before_install:
   - npm i -g pnpm
 
 install:
-  - pnpm install --frozen-lockfile --store=.pnpm-store
+  - pnpm install --production --frozen-lockfile --store=.pnpm-store
 
 script:
   - pnpm run it
