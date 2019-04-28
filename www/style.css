@@ -23,6 +23,15 @@ article {
   margin-bottom: 2em;
 }
 
+article.done {
+  opacity: 0.6;
+  transition: opacity 100ms;
+}
+
+article.done:hover {
+  opacity: 0.8;
+}
+
 article header {
   display: grid;
   grid-template-columns: 1fr minmax(20ch, max-content);
