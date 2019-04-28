@@ -56,6 +56,10 @@ article header {
   article h2::before {
     content: '» ';
   }
+  
+  article header .finished {
+    display: block;
+  }
 }
 
 article header h2 {
@@ -87,6 +91,18 @@ article header .started {
 
 article header .finished {
   grid-area: finished;
+  display: none;
+}
+
+@media (max-width: 599.99px) {
+  article.done header .finished {
+    display: block;
+    grid-area: started;
+  }
+
+  article.done header .started {
+    display: none;
+  }
 }
 
 article footer {
