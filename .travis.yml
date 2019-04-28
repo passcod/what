@@ -13,10 +13,10 @@ before_cache:
 
 before_install:
   - set -e
-  - npm i -g pnpm
+  - npm i -g --prefer-offline pnpm
 
 install:
-  - pnpm install --production --frozen-lockfile --store=.pnpm-store
+  - pnpm install --production --prefer-offline --frozen-lockfile --store=.pnpm-store
 
 script:
   - pnpm run it
