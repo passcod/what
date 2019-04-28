@@ -18,6 +18,7 @@ install:
   - pnpm install --frozen-lockfile --store=.pnpm-store
 
 script:
+  - pnpm config list -l
   - pnpm run it
 
 after_script: set +e
