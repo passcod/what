@@ -23,6 +23,10 @@ branches:
     # main branches
     - main
 
+notifications:
+  email:
+    on_success: never
+
 deploy:
   provider: pages
   github_token: $GITHUB_TOKEN

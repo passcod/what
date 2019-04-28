@@ -22,6 +22,7 @@
   "dependencies": {
     "@iarna/toml": "^2.2.3",
     "@sindresorhus/slugify": "^0.9.1",
+    "arr-sort": "^1.0.0",
     "expand-contractions": "^1.0.1",
     "globby": "^9.2.0",
     "luxon": "^1.12.1",

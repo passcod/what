@@ -7,6 +7,7 @@ import slugify from '@sindresorhus/slugify';
 import contractions from 'expand-contractions';
 import ms from 'ms';
 import luxon from 'luxon';
+import arrSort from 'arr-sort';
 
 async function load (path) {
   const file = await fs.readFile(path);
@@ -15,9 +16,9 @@ async function load (path) {
   if (!data.name) data.name = basename(path, '.toml');
   if (!data.slug) data.slug = slugify(contractions.expand(data.name.replace(/[^\w.]+/g, ' ')));
 
-  if (!Array.isArray(data.with)) data.with = [data.with]
-  if (!Array.isArray(data.where)) data.where = [data.where]
-  if (!Array.isArray(data.media)) data.media = [data.media]
+  if (!Array.isArray(data.with)) data.with = [data.with].filter(_=>_)
+  if (!Array.isArray(data.where)) data.where = [data.where].filter(_=>_)
+  if (!Array.isArray(data.media)) data.media = [data.media].filter(_=>_)
 
   for (const i in data.where) {
     let where = data.where[i];
@@ -52,24 +53,30 @@ async function render (data) {
         ${started ? `<time class="started" datetime="${data.started}">Started ${started}</time>` : ''}
         ${finished ? `<time class="finished" datetime="${data.finished}">Finished ${finished}</time>` : ''}
       </header>
-      <h3 class="how">How I’m doing that / Some details:</h3>
-      ${data.how.split('\n').map(p => `<p>${widowfix(p)}</p>`).join('\n')}
-      <h3 class="now">Where I’m up to now:</h3>
-      ${data.now ? `<p class="now">${widowfix(data.now)}</p>` : ''}
+
+      ${data.how ? `<h3 class="how">How I’m doing that / Some details:</h3>
+      ${data.how.split('\n').map(p => `<p>${widowfix(p)}</p>`).join('\n')}` : ''}
+
+      ${data.now ? `<h3 class="now">Where I’m up to now:</h3>
+      <p class="now">${widowfix(data.now)}</p>` : ''}
+
       <footer>
         <dl>
-          <dt>With:</dt>
-          <dd class="with">${data.with.map(w => `<span class="with">${w}</span>`).join(', ')}</dd>
+          ${data.with.length ? `<dt>With:</dt>
+          <dd class="with">${data.with.map(w => `<span class="with">${w}</span>`).join(', ')}</dd>`
+          : ''}
 
-          <dt>Where:</dt>
+          ${data.where.length ? `<dt>Where:</dt>
           <dd><ul>
             ${data.where.map(w => `<li><a href="${w}">${w}</a></li>`).join('\n')}
-          </ul></dd>
+          </ul></dd>`
+          : ''}
 
-          <dt>Media:</dt>
+          ${data.media.length ? `<dt>Media:</dt>
           <dd><ul>
             ${data.media.map(w => `<li><a href="${w}">${w}</a></li>`).join('\n')}
-          </ul></dd>
+          </ul></dd>`
+          : ''}
         </dl>
       </footer>
     </article>
@@ -97,28 +104,12 @@ log('Starting...');
   projects = await Promise.all(projects.map(load));
   log('Loaded');
 
-  projects.sort((a, b) => {
-    if (a.name > b.name) return 1;
-    if (b.name > a.name) return -1;
-    return 0;
-  });
-
-  // 'doing' sorts higher than 'done'
-  projects.sort((a, b) => {
-    if (a.status > b.status) return 1;
-    if (b.status > a.status) return -1;
-    return 0;
-  });
-
-  projects.sort((a, b) => {
-    if (a.finished && b.finished)
-      return datems(b.finished) - datems(a.finished);
-
-    if (a.started && b.started)
-      return datems(b.started) - datems(a.started);
-
-    return 0;
-  });
+  projects = arrSort(projects, [
+    { attr: 'status' },
+    { attr: 'finished', asc: false },
+    { attr: 'started', asc: false },
+    { attr: 'name' },
+  ]);
   log('Sorted');
 
   projects = await Promise.all(projects.map(render));
