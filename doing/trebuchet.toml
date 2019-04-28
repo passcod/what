@@ -1,0 +1,6 @@
+what = "A deploy tool / experiment using Btrfs volume archives."
+how = "The actual deploy tool is a client/server/agent suite with some neat features but aiming to be extremely light on resources, at least compared to many other tools I’ve tried. But the core underpinning, the main idea, comes from playing around with btrfs volumes/snapshots and the export/import commands on the tool. Essentially you can ask for an export of a volume, and you can ask for an export of a volume <b>based on another volume</b>, then on import, which can be on a completely different filesystem/disk/machine, as long as you have that same base volume, you can restore. So you can have filesystem-level diff archives on demand, with no awareness from the application being built/deployed, and everything is already in standard linux tools. It just needs some wrapping and managing."
+with = ["btrfs", "rust", "json-rpc", "websocket"]
+where = "github:passcod/trebuchet"
+started = "2018-11-22"
+now = "On pause while waiting for some dependencies to mature."

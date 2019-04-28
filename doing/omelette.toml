@@ -1,0 +1,6 @@
+what = "A Twitter personal archiver tool suite."
+how = "This is a suite of tools written in Rust that read tweets from either your timeline or Twitter archive zips and store them in a Postgres database. Then there’s a few other tools that can manipulate that database. There’s also “native” support for deletion of tweets. The idea is both to have a queryable archive (finding tweets using SQL is a pretty cool experience) and to be able to delete tweets based on queries without doing lots of requests to Twitter: there's just pulling the tweets, and deleting them."
+with = ["rust", "egg-mode", "reqwest", "diesel", "postgres"]
+where = "github:passcod/omelette"
+started = "2018-12-22"
+now = "On pause since January, but I was going to write a tool that connects to the twitter webhook feed."

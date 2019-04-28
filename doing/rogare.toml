@@ -1,0 +1,6 @@
+what = "A Discord bot for a local writer/nanowrimo group."
+how = "It’s a custom Ruby bot with its own custom framework. Originally it grew from an IRC bot using the Cinch framework, but when the community moved to Discord the framework got adapted, and then refactored. The bot has a low key sassy attitude, provides a bunch of common small tools (like dice, random pickers and choosers, writing prompts, etc), but also has a pretty good “wordwar” implementation, and its prized jewel: a name generator seeded from some 150 000 actual names from various sources."
+with = ["ruby", "discord-rb", "sequel"]
+where = "github:storily/rogare"
+started = "2014-05-09"
+now = "Mostly just doing maintenance."
