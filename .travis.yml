@@ -3,12 +3,19 @@ language: node_js
 node_js:
   - "12"
 
+cache:
+  - directories:
+    - .pnpm-store
+before_cache:
+  # Travis can't cache files that are not readable by "others"
+  - chmod -R a+r .pnpm-store
+
 before_install:
   - set -e
   - curl -L https://unpkg.com/@pnpm/self-installer | node
 
 install:
-  - pnpm install --frozen-lockfile
+  - pnpm install --frozen-lockfile --store=.pnpm-store
 
 script:
   - pnpm run it
