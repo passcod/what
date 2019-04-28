@@ -5,6 +5,7 @@ node_js:
 
 cache:
   - directories:
+    - $HOME/.npm
     - .pnpm-store
 before_cache:
   # Travis can't cache files that are not readable by "others"
@@ -12,10 +13,10 @@ before_cache:
 
 before_install:
   - set -e
-  - curl -L https://unpkg.com/@pnpm/self-installer | node
+  - npm i -g --prefer-offline pnpm
 
 install:
-  - pnpm install --frozen-lockfile --store=.pnpm-store
+  - pnpm install --production --prefer-offline --frozen-lockfile --store=.pnpm-store
 
 script:
   - pnpm run it
