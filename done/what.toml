@@ -3,7 +3,7 @@ how = "It’s a Node script that creates a small static site from a TOML file. O
 with = ["node", "pnpm", "travis", "toml"]
 where = "github:passcod/what"
 started = "2019-04-27"
-now = "If you’re reading this then I must be done or close to it!"
+finished = "2019-04-29"
 media = [
   "https://twitter.com/passcod/status/1122081844751687681",
 ]
