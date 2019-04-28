@@ -1,7 +1,10 @@
 what = "A small tool to show off what I’m working on."
 how = "It’s a Node script that creates a small static site from a TOML file. On push of its git repo, a Travis build kicks off, and pushes the result to its gh_pages branch, which updates the site."
 with = ["node", "pnpm", "travis", "toml"]
-where = "github:passcod/what"
+where = [
+  "github:passcod/what",
+  "https://what.passcod.name",
+]
 started = "2019-04-27"
 finished = "2019-04-29"
 media = [
