@@ -29,7 +29,7 @@ deploy:
   skip_cleanup: true
   keep_history: true
   fqdn: what.passcod.name
-  local_dir: www
+  local_dir: ./www
   on:
     repo: passcod/what
     branch: main

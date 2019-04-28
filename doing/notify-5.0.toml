@@ -1,6 +1,8 @@
-what = "The next release (5.0) of the Notify file monitor library."
+name = "notify 5.0"
+what = "The next release of the Notify file monitor library."
 how = "I’m refactoring: the event system (using the new system from the next branch and by this same act unifying the raw and debounced events), configuration (introducing runtime config, moving some notify features to opt-in instead of being always on), some naming (“raw” mode is not very descriptive in hindsight, so I’m calling it “immediate” mode now)."
 with = ["rust"]
+where = "github:passcod/notify"
 started = "2019-03-28"
 now = "Rewriting the immediate events to the new system."
 media = [
