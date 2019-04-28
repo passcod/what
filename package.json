@@ -26,8 +26,7 @@
     "expand-contractions": "^1.0.1",
     "globby": "^9.2.0",
     "luxon": "^1.12.1",
-    "ms": "^2.1.1",
-    "yargs": "^13.2.2"
+    "ms": "^2.1.1"
   },
   "devDependencies": {
     "http-server": "^0.11.1",

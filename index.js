@@ -1,5 +1,4 @@
 import TOML from '@iarna/toml';
-import yargs from 'yargs';
 import { promises as fs } from 'fs';
 import globby from 'globby';
 import { basename } from 'path';
@@ -95,7 +94,7 @@ function datems (date) {
 }
 
 log('Starting...');
-(async function main (args) {
+(async function main () {
   log('Started');
 
   let projects = await globby(['doing/*.toml', 'done/*.toml']);
@@ -119,7 +118,7 @@ log('Starting...');
   template = template.toString().replace(/<template\s*\/>/, projects.join('\n'));
   await fs.writeFile('www/index.html', template);
   log('Written');
-}(yargs.argv)).catch((err) => {
+}()).catch((err) => {
   console.error(err);
   process.exit(err.code || 1);
 });
