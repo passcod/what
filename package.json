@@ -1,0 +1,32 @@
+{
+  "name": "what",
+  "version": "1.0.0",
+  "description": "A tiny static site generator for one purpose: showing off what I’m doing now.",
+  "type": "module",
+  "scripts": {
+    "dev": "run-p watch www",
+    "it": "node --experimental-modules index.js",
+    "watch": "nodemon -e js,toml -x pnpm -- run -s it",
+    "www": "http-server www/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/passcod/what.git"
+  },
+  "author": "Félix Saparelli <felix@passcod.name> (https://passcod.name)",
+  "license": "Artistic-2.0",
+  "bugs": {
+    "url": "https://github.com/passcod/what/issues"
+  },
+  "homepage": "https://github.com/passcod/what#readme",
+  "dependencies": {
+    "@iarna/toml": "^2.2.3",
+    "globby": "^9.2.0",
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "nodemon": "^1.18.11",
+    "npm-run-all": "^4.1.5"
+  }
+}

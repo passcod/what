@@ -1,0 +1,35 @@
+dist: xenial
+language: node_js
+node_js:
+  - "12"
+
+before_install:
+  - set -e
+  - curl -L https://unpkg.com/@pnpm/self-installer | node
+
+install:
+  - pnpm install --frozen-lockfile
+
+script:
+  - pnpm run it
+
+after_script: set +e
+
+branches:
+  only:
+    # test branches
+    - /^try-/
+
+    # main branches
+    - main
+
+deploy:
+  provider: pages
+  github_token: $GITHUB_TOKEN
+  skip_cleanup: true
+  keep_history: true
+  fqdn: what.passcod.name
+  local_dir: www
+  on:
+    repo: passcod/what
+    branch: main
