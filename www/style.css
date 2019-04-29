@@ -44,6 +44,27 @@ article header {
   border-bottom: 1px solid var(--black);
 }
 
+
+article header .started {
+  grid-area: started;
+}
+
+article header .finished {
+  grid-area: finished;
+  display: none;
+}
+
+@media (max-width: 599.99px) {
+  article.done header .finished {
+    display: block;
+    grid-area: started;
+  }
+
+  article.done header .started {
+    display: none;
+  }
+}
+
 @media (min-width: 600px) {
   article header {
     grid-template-columns: 1fr minmax(20ch, max-content);
@@ -83,26 +104,6 @@ article header .what {
 
 article header time {
   text-align: right;
-}
-
-article header .started {
-  grid-area: started;
-}
-
-article header .finished {
-  grid-area: finished;
-  display: none;
-}
-
-@media (max-width: 599.99px) {
-  article.done header .finished {
-    display: block;
-    grid-area: started;
-  }
-
-  article.done header .started {
-    display: none;
-  }
 }
 
 article footer {
