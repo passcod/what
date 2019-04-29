@@ -6,11 +6,23 @@ import slugify from '@sindresorhus/slugify';
 import contractions from 'expand-contractions';
 import ms from 'ms';
 import luxon from 'luxon';
-import arrSort from 'arr-sort';
+import sortOn from 'sort-on';
+import git from 'simple-git/promise.js';
+
+function parsedate (date) {
+  return luxon.DateTime.fromISO(date).setZone('Pacific/Auckland');
+}
+
+function parsegittime (time) {
+  const [d, t, z] = time.split(' ');
+  return parsedate(`${d}T${t}${z}`);
+}
 
 async function load (path) {
   const file = await fs.readFile(path);
   const data = TOML.parse(file);
+  data.path = path;
+
   if (!data.status) data.status = path.split('/', 2)[0];
   if (!data.name) data.name = basename(path, '.toml');
   if (!data.slug) data.slug = slugify(contractions.expand(data.name.replace(/[^\w.]+/g, ' ')));
@@ -19,17 +31,26 @@ async function load (path) {
   if (!Array.isArray(data.where)) data.where = [data.where].filter(_=>_)
   if (!Array.isArray(data.media)) data.media = [data.media].filter(_=>_)
 
+  if (data.started) data.started = parsedate(data.started).toString();
+  if (data.finished) data.finished = parsedate(data.finished).toString();
+
   for (const i in data.where) {
     let where = data.where[i];
     if (where.startsWith('github:'))
       where = data.where[i] = where.replace('github:', 'https://github.com/');
   }
 
-  return data;
-}
+  try {
+    const logs = await git('.').log({ file: path, n: 1 });
+    if (logs && logs.latest) {
+      data.commit = logs.latest.hash;
+      data.modified = parsegittime(logs.latest.date).toString();
+    }
+  } catch (_) {
+    //
+  }
 
-function parsedate (date) {
-  return luxon.DateTime.fromISO(date).setZone('Pacific/Auckland');
+  return data;
 }
 
 function widowfix (text) {
@@ -43,14 +64,17 @@ function widowfix (text) {
 async function render (data) {
   const started = data.started && parsedate(data.started).toFormat('d LLLL y');
   const finished = data.finished && parsedate(data.finished).toFormat('d LLLL y');
+  const modified = data.modified && (parsedate(data.modified).toFormat('d LLLL y, ~H:mm') + ' NZ');
 
   return `
-    <article id="${data.slug}" class="${data.status}">
+    <article id="${data.slug}" class="${data.status}" data-commit="${data.commit}">
       <header>
         <h2><a href="#${data.slug}">${data.name}</a></h2>
         <p class="what">${widowfix(data.what)}</p>
-        ${started ? `<time class="started" datetime="${data.started}">Started ${started}</time>` : ''}
-        ${finished ? `<time class="finished" datetime="${data.finished}">Finished ${finished}</time>` : ''}
+        ${started ? `<time class="started" datetime="${data.started}"
+          title="${data.started}">Started ${started}</time>` : ''}
+        ${finished ? `<time class="finished" datetime="${data.finished}"
+          title="${data.finished}">Finished ${finished}</time>` : ''}
       </header>
 
       ${data.how ? `<h3 class="how">How I’m doing that / Some details:</h3>
@@ -61,6 +85,12 @@ async function render (data) {
 
       <footer>
         <dl>
+          ${modified ? `<dt>Last modified:</dt>
+          <dd>
+            <time datetime="${data.modified}" title="${data.modified}">${modified}</time>
+            (<a href="https://github.com/passcod/what/commits/${data.commit}/${data.path}">history</a>)
+          </dd>` : ''}
+
           ${data.with.length ? `<dt>With:</dt>
           <dd class="with">${data.with.map(w => `<span class="with">${w}</span>`).join(', ')}</dd>`
           : ''}
@@ -89,10 +119,6 @@ function log (...args) {
   console.log(...args);
 }
 
-function datems (date) {
-  return +parsedate(date).toFormat('x');
-}
-
 log('Starting...');
 (async function main () {
   log('Started');
@@ -103,11 +129,12 @@ log('Starting...');
   projects = await Promise.all(projects.map(load));
   log('Loaded');
 
-  projects = arrSort(projects, [
-    { attr: 'status' },
-    { attr: 'finished', asc: false },
-    { attr: 'started', asc: false },
-    { attr: 'name' },
+  projects = sortOn(projects, [
+    'status',
+    '-finished',
+    '-modified',
+    '-started',
+    'name',
   ]);
   log('Sorted');
 
