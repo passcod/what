@@ -1,0 +1,9 @@
+what = "Updating Omelette’s archive importer for the new format"
+how = "Omelette is a suite of personal archiving tools for tweets. The current version reads the old “slim” archive format, with only few details... I plan to upgrade that tool to the “full” archive format, which is reported to contain a lot more details."
+with = ["rust", "egg-mode", "reqwest", "diesel", "postgres"]
+where = "github:passcod/omelette"
+started = "2019-05-02"
+now = "Requested my archive in the new format, waiting for it to get ready."
+media = [
+  "https://twitter.com/cabel/status/1121610739133734912",
+]
