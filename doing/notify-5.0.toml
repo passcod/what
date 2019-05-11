@@ -4,7 +4,7 @@ how = "I’m refactoring: the event system (using the new system from the next b
 with = ["rust"]
 where = "github:passcod/notify"
 started = "2019-03-28"
-now = "Halfway through adapting the debouncing to the new events, making progress."
+now = "Nearly done the first pass of adapting the debouncing to the new events."
 media = [
   "https://twitter.com/passcod/status/1119943511095136257",
   "https://twitter.com/passcod/status/1124936733190045696",
