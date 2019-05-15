@@ -3,4 +3,4 @@ how = "The actual deploy tool is a client/server/agent suite with some neat feat
 with = ["btrfs", "rust", "json-rpc", "websocket"]
 where = "github:passcod/trebuchet"
 started = "2018-11-22"
-now = "On pause while waiting for some dependencies to mature."
+now = "Proper implementation on pause while waiting for some dependencies to mature, but a proofing of the core technology is getting built and will be in production soon."
