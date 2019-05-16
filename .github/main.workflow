@@ -12,7 +12,7 @@ action "Deploy to gh-pages" {
   uses = "passcod/github-pages-deploy-action@master"
   env = {
     BRANCH = "gh-pages"
-    BUILD_SCRIPT = "npm i -g pnpm && pnpm i --production --frozen-lockfile && pnpm run it"
+    BUILD_SCRIPT = "pnpm i --production --frozen-lockfile && pnpm run it"
     FOLDER = "www"
     BASE_BRANCH = "main"
     CNAME = "what.passcod.name"
