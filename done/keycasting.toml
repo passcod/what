@@ -1,0 +1,9 @@
+what = "My house key is uncopyable crap. I tried to make my own."
+how = "Experimenting using epoxy casting in silicon moulds. In the end it wasn’t strong enough for daily use, but I learned lots and even managed to produce something okay!"
+with = ["casting epoxy", "moulding silicon", "a dimple key"]
+started = "2018-03-13"
+finished = "2019-03-31"
+media = [
+  "https://twitter.com/passcod/status/1106760723248508928",
+  "https://twitter.com/passcod/status/1107512847821492225",
+]
