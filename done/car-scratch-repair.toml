@@ -1,0 +1,9 @@
+what = "Repairing a deep scratch on my car"
+how = "DIY: some resin to fill the gap, lots of sanding, applying colour, more sanding, clear coats, some buffing."
+with = ["600 grit", "800 grit", "1200 grit", "clear coat", "prototyping resin", "black paint"]
+started = "2019-04-03"
+finished = "2019-04-07"
+media = [
+  "https://twitter.com/passcod/status/1113310746090172416",
+  "https://twitter.com/passcod/status/1114744770008498176",
+]
