@@ -4,3 +4,7 @@ with = ["btrfs", "rust", "json-rpc", "websocket"]
 where = "github:passcod/trebuchet"
 started = "2018-11-22"
 now = "Proper implementation on pause while waiting for some dependencies to mature, but a proofing of the core technology is getting built and will be in production soon."
+media = [
+  "https://twitter.com/passcod/status/1110037271439261696",
+  "https://twitter.com/passcod/status/1110890661413187584",
+]
