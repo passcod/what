@@ -1,0 +1,7 @@
+what = "A command line tool to provide a first-class Rust dev experience."
+how = "Mostly just a feature list at this point, started when I was thinking through some feature requests on Cargo Watch."
+with = ["rust", "cargo", "workflowy"]
+started = "2019-04-05"
+media = [
+  "https://twitter.com/passcod/status/1114001598336753664",
+]
