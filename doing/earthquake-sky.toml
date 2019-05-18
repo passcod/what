@@ -1,0 +1,12 @@
+name = "Earthquake Sky"
+what = "An experimental art piece representing a map of all earthquakes around Aotearoa like a star atlas."
+how = "The substrate is an A0 piece of white cardboard/foamboard. On it I'm placing hundreds of dots of varying sizes using clear nail polish, in the rough locations of all earthquakes since 1900 (as much data as is available) in the land and sea around Aotearoa. Once done, I will splash blue inks over the board, then wash lightly. The result should be that where the polish is, the ink slides off, resulting in a dark blue background with white dots peeking out. Ultimately, this is expected to be an experience both near and afar, with the polish providing a tactile feel."
+now = "Picked it back up after many months, starting on the mass concentrations of the North part of the image."
+with = ["foamboard", "Morgan Taylor clear nail polish base coat", "GeoNet and USDS data", "QGis"]
+started = "2018-10-01"
+media = [
+  "https://twitter.com/passcod/status/1046684642030411777",
+  "https://twitter.com/passcod/status/1047096975730982912",
+  "https://twitter.com/passcod/status/1055345962061750272",
+  "https://blog.passcod.name/2018/nov/10/monthly-update",
+]
