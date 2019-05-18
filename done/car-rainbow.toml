@@ -1,0 +1,9 @@
+what = "Adorning my car with a line of rainbow"
+how = "The original idea was to add a decoration that would distract from the various scratches and DIY repairs on my car. I started by calculating the length I’d need, then designing and ordering about five metres of rainbow “bumper” stickers in 30cm lengths. Then I mocked up the shape of the line with masking tape, and sat on it for a few days. In the end I went with a diagonal line rather than horizontal. It needed lots of adjustments to <i>look</i> straight from a distance, while dealing with the reality of curved surfaces. Once I received the stickers, careful application took three afternoons."
+with = ["stickers", "my car"]
+started = "2019-04-07"
+finished = "2019-04-27"
+media = [
+  "https://twitter.com/passcod/status/1114729273091166208",
+  "https://twitter.com/passcod/status/1117301877484351488",
+]
