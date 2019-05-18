@@ -1,0 +1,6 @@
+what = "A tiny website that generates dynamic recipes based on what you have."
+with = ["vue"]
+started = "2019-01-30"
+media = [
+  "https://twitter.com/passcod/status/1090535534441652224",
+]
