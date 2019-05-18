@@ -4,3 +4,8 @@ with = ["ruby", "discord-rb", "sequel"]
 where = "github:storily/rogare"
 started = "2014-05-09"
 now = "Mostly just doing maintenance."
+media = [
+  "https://twitter.com/passcod/status/1065858657680711680",
+  "https://twitter.com/passcod/status/1067252714831151104",
+  "https://twitter.com/passcod/status/1073109093181579265",
+]
