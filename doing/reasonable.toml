@@ -5,3 +5,9 @@ with = ["rust", "diesel", "postgres", "sodium", "rocket"]
 where = "github:passcod/reasonable.kiwi"
 started = "2019-03-01"
 now = "On pause as I wait for dependencies to mature."
+media = [
+  "https://twitter.com/passcod/status/1103222271181635589",
+  "https://twitter.com/passcod/status/1103960778133037056",
+  "https://twitter.com/passcod/status/1104185957513744384",
+  "https://twitter.com/passcod/status/1104256323611291648",
+]
