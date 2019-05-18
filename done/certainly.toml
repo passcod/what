@@ -1,0 +1,11 @@
+what = "A simple certificate tool"
+how = "Mostly just binding to OpenSSL and creating/inspecting certificates with the least user interaction possible. There are other tools that take a similar approach but they either do too little (only self-signed certs, no self-CA-signed ones) or too much (install themselves by default into various system certificate stores). Plus it was an interesting way to learn more about the OpenSSL APIs and certificates."
+with = ["rust", "openssl"]
+started = "2018-09-05"
+finished = "2018-09-06"
+media = [
+  "https://twitter.com/passcod/status/1037261932963590145",
+  "https://twitter.com/passcod/status/1037534193603887104",
+  "https://twitter.com/passcod/status/1041992168523431939",
+  "https://twitter.com/passcod/status/1049530800146792449",
+]
