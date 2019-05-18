@@ -1,0 +1,10 @@
+name = "Notify Next Generation"
+what = "Experiments and development for Notify’s next generation."
+with = ["rust", "async/await"]
+where = "github:passcod/notify"
+started = "2016-12-29"
+media = [
+  "https://twitter.com/passcod/status/1032918089774460929",
+  "https://github.com/passcod/notify/blob/main/CHANGELOG.md#start-work-on-vnext-2016-12-29",
+  "https://twitter.com/passcod/status/1049259251674148864",
+]
