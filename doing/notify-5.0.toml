@@ -4,10 +4,17 @@ how = "I’m refactoring: the event system (using the new system from the next b
 with = ["rust"]
 where = "github:passcod/notify"
 started = "2019-03-28"
-now = "Converted the bulk of the library code, onto test code."
+now = "Working on the second prerelease, which will have no debouncing but all immediate events with the new system."
 media = [
   "https://twitter.com/passcod/status/1119943511095136257",
   "https://twitter.com/passcod/status/1124936733190045696",
   "https://twitter.com/passcod/status/1135517583807922176",
   "https://twitter.com/passcod/status/1135828060186431488",
+  "https://twitter.com/passcod/status/1140893978276982784",
+  "https://twitter.com/passcod/status/1141698852656832513",
+  "https://twitter.com/passcod/status/1142367766734725120",
+  "https://twitter.com/passcod/status/1142376552337854464",
+  "https://github.com/passcod/notify/blob/main/CHANGELOG.md#500-pre0-2019-06-22",
+  "https://twitter.com/passcod/status/1142402490068897792",
+  "https://github.com/octplane/fsevent-rust/pull/20",
 ]
