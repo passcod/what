@@ -1,0 +1,7 @@
+what = "A utility to swap two files atomically, or as close as"
+how = "On Linux 3.15+, the renameat2 call. On macOS, the exchangedata call. On Windows that supports Transactional NTFS, that. On WSL2 (potentially), the renameat2 call. On other platforms, a fallback method or two. In the end I decided there’s other tools and projects that do that and I’m not going to spend more time on it."
+with = ["rust"]
+where = "https://github.com/passcod/swp"
+started = "2019-05-22"
+finished = "2019-06-30"
+media = []
