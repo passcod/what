@@ -1,9 +1,13 @@
 what = "A job system for a wonderful world."
 how = "This is about building a job system that offers rich workflow potential and excellent monitoring/auditability while also being very lightweight. Scalability and partition-tolerance are secondary concerns at the moment. Inspired by Gearman, but aiming to be a superset."
 with = ["rust", "json-rpc", "websocket"]
-where = "github:passcod/armstrong"
+where = [
+  "github:passcod/armstrong",
+  "github:passcod/gearbox",
+  "github:passcod/gearbox-rs",
+]
 started = "2018-11-22"
-now = "On pause while waiting for stable async/await in Rust."
+now = "I made a kinda sorta 50% implementation named Gearbox in Node.js for work, and I made plans for a custom queueing store based on Sled, as well as nailed down the necessary features of the core job queue."
 media = [
   "https://twitter.com/passcod/status/1085658418428276738",
   "https://twitter.com/passcod/status/1086764854550192128",
