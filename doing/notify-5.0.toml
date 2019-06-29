@@ -4,7 +4,7 @@ how = "I’m refactoring: the event system (using the new system from the next b
 with = ["rust"]
 where = "github:passcod/notify"
 started = "2019-03-28"
-now = "Working on the second prerelease, which will have no debouncing but all immediate events with the new system."
+now = "Working on the second prerelease, which will have no debouncing but all immediate events with the new system. Also working on a possible pre.0 bug on mac that I coulda sworn passed the test suite but Apparently Not."
 media = [
   "https://twitter.com/passcod/status/1119943511095136257",
   "https://twitter.com/passcod/status/1124936733190045696",
