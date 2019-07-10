@@ -3,7 +3,7 @@ how = "I want to get locales in there as well as voice, and the Ruby implementat
 with = ["Rust", "serenity (discord client)", "config-rs", "Fluent (l10n)", "diesel (postgres initially)"]
 where = "github:storily/garrire"
 started = "2019-07-07"
-now = "Implementing an alternate interface to Fluent that supports the bot’s patterns"
+now = "Converting some commands: starting slow and doing the small stuff first (8ball, basic calc, choose, colour, dice, motivate, pick, pronouns)."
 media = [
   "https://twitter.com/passcod/status/1148485443060523008",
 ]
