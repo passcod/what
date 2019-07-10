@@ -2,7 +2,7 @@ what = "A rewrite of rogare in Rust"
 how = "I want to get locales in there as well as voice, and the Ruby implementation just isn't solid enough for this kind of thing. There’s also a lot of cruft in rogare I’d like to avoid, bringing over only the Good Parts."
 with = ["Rust", "serenity (discord client)", "config-rs", "Fluent (l10n)", "diesel (postgres initially)"]
 where = "github:storily/garrire"
-started = "2018-07-07"
+started = "2019-07-07"
 now = "Implementing an alternate interface to Fluent that supports the bot’s patterns"
 media = [
   "https://twitter.com/passcod/status/1148485443060523008",
