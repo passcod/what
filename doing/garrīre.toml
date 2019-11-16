@@ -6,6 +6,12 @@ started = "2019-07-07"
 now = "Pondering a refactor dumping the serenity framework for a setup where the entire command space is a single LALRPOP grammar, to both simplify development and add more power, such as typo resolution and expressive aliasing."
 media = [
   "https://twitter.com/passcod/status/1148485443060523008",
+  "https://twitter.com/passcod/status/1175754128938565632",
+  "https://twitter.com/passcod/status/1179950538764382209",
+  "https://twitter.com/passcod/status/1181208515509018624",
+  "https://twitter.com/passcod/status/1182937660194582529",
+  "https://twitter.com/passcod/status/1183000979433607168",
+  "https://twitter.com/passcod/status/1184024184399073280",
   "https://twitter.com/passcod/status/1186166780026216449",
   "https://twitter.com/passcod/status/1185371114739884038",
   "https://twitter.com/passcod/status/1187727565286453254",
