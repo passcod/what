@@ -2,6 +2,7 @@ what = "Learning Irish"
 how = "Duolingo, fanfic, etc."
 with = ["duolingo", "ap_aeflwine’s fanfic", "glossika"]
 started = "2018-07-01"
+finished = "2019-09-01"
 media = [
   "https://twitter.com/passcod/status/1063721466506539009",
   "https://twitter.com/passcod/status/1081508831916548103",
