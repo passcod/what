@@ -1,0 +1,9 @@
+what = "Reviewing my Twitter blocklist"
+how = "Wrote a couple scripts to import it into a Postgres database, and then tried to go through."
+with = ["postgres", "rust", "omelette"]
+where = "local"
+started = "2019-06-15"
+now = "Kinda gave up, but still want to keep at it... maybe later"
+media = [
+  "https://twitter.com/passcod/status/1183178381216509958",
+]
