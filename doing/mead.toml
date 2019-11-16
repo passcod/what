@@ -1,0 +1,8 @@
+what = "A batch of honeymead"
+how = "Mead is a pretty simple recipe, really: take honey, add water, optionally add something to help yeasting (I used pears), add six to twenty-four months of time."
+with = ["clover/mixed-flower honey", "bottled water", "whole pears", "various bottles"]
+where = "home"
+started = "2019-08-07"
+media = [
+  "https://twitter.com/passcod/status/1188323060887089152"
+]
