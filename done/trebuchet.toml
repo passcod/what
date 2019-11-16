@@ -3,7 +3,8 @@ how = "The actual deploy tool is a client/server/agent suite with some neat feat
 with = ["btrfs", "rust", "json-rpc", "websocket"]
 where = "github:passcod/trebuchet"
 started = "2019-03-25"
-now = "Proper implementation on pause while waiting for some dependencies to mature, but a proofing of the core technology was built and is in production. Verdict: it’s pretty cool, but the btrfs stuff adds some unforseen constraints. I’d still like an implementation, but some of the technology might need some reviewing."
+finished = "2019-10-03"
+now = "The btrfs stuff added too many constraints; abandoned."
 media = [
   "https://twitter.com/passcod/status/1110037271439261696",
   "https://twitter.com/passcod/status/1110890661413187584",
