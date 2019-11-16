@@ -1,0 +1,10 @@
+what = "A PR to Rust’s stdlib"
+how = "Someone in the community discord wanted a feature and I was like “hey, why not try to implement it, that could be fun” (based on an existing but obsoleted PR)."
+with = ["hashbrown", "rust", "simonsapin", "dtolnay", "amanieu", "dylan-dpc", "centril"]
+where = "https://github.com/rust-lang/rust/pull/64656"
+started = "2019-09-21"
+finished = "2019-10-09"
+media = [
+ "https://twitter.com/passcod/status/1178568262310879232",
+  "https://twitter.com/passcod/status/1180312263925780480",
+]
