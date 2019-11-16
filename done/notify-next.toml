@@ -3,8 +3,11 @@ what = "Experiments and development for Notify’s next generation."
 with = ["rust", "async/await"]
 where = "github:passcod/notify"
 started = "2016-12-29"
+finished = "2019-09-02"
+now = "I abandoned Notify and then gave it over to another team."
 media = [
   "https://twitter.com/passcod/status/1032918089774460929",
   "https://github.com/passcod/notify/blob/main/CHANGELOG.md#start-work-on-vnext-2016-12-29",
   "https://twitter.com/passcod/status/1049259251674148864",
+  "https://twitter.com/passcod/status/1168188637361725442",
 ]

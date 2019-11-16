@@ -4,7 +4,8 @@ how = "I’m refactoring: the event system (using the new system from the next b
 with = ["rust"]
 where = "github:passcod/notify"
 started = "2019-03-28"
-now = "Still working on the third prerelease, which will have no debouncing but all immediate events with the new system."
+finished = "2019-09-02"
+now = "I abandoned Notify and then gave it over to another team."
 media = [
   "https://twitter.com/passcod/status/1119943511095136257",
   "https://twitter.com/passcod/status/1124936733190045696",
@@ -17,4 +18,5 @@ media = [
   "https://github.com/passcod/notify/blob/main/CHANGELOG.md#500-pre0-2019-06-22",
   "https://twitter.com/passcod/status/1142402490068897792",
   "https://github.com/octplane/fsevent-rust/pull/20",
+  "https://twitter.com/passcod/status/1168188637361725442",
 ]
