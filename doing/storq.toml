@@ -1,0 +1,6 @@
+what = "A store for queues"
+how = "I sketched this over a few days and the readme has more but I’m not entirely sure where its heart lies yet. It’s a low-level store focused around medium-scale queues with some added advanced features. Nothing too terribly exciting, but is being written to enable more stuff higher up."
+with = ["rust", "sled"]
+where = "github:passcod/storq"
+started = "2018-07-01"
+media = []
