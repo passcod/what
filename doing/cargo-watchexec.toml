@@ -1,0 +1,11 @@
+what = "Cargo Watch and Watchexec maintenance and development"
+how = "Triage and reviewing pull requests and cleaning up and implementing features and the works"
+with = ["rust", "cargo-watch (woo dogfooding!)", "contributors (so thankful)"]
+where = [
+  "github:passcod/cargo-watch",
+  "github:watchexec/watchexec",
+]
+started = "2014-08-01"
+media = [
+  "https://twitter.com/passcod/status/1188711837937717249",
+]
