@@ -5,6 +5,7 @@ where = "github:storily/garrire"
 started = "2019-07-07"
 now = "While the serenity-based instance is in production, the dawn trial didn't really go anywhere. I now want to investigate a different approach entirely based on translating the API to http calls to a local server, and implementing the actual functionality in scripts or adhoc servers routed via nginx instead of a monolithic / custom plugin system approach."
 media = [
+  "https://twitter.com/passcod/status/1248854499772391425",
   "https://twitter.com/passcod/status/1148485443060523008",
   "https://twitter.com/passcod/status/1175754128938565632",
   "https://twitter.com/passcod/status/1179950538764382209",
