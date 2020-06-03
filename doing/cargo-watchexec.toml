@@ -6,6 +6,7 @@ where = [
   "github:watchexec/watchexec",
 ]
 started = "2014-08-01"
+now = "This is gated on finishing up Caretaker for Cargo Watch, and defnew takes priority also."
 media = [
   "https://twitter.com/passcod/status/1173065130159984640",
   "https://twitter.com/passcod/status/1188711837937717249",

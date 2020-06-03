@@ -1,0 +1,15 @@
+what = "Final installment of the key saga"
+how = "In January I ordered key blanks that matched my key from AliExpress, in order to maybe finally be able to either cut my own keys or get them cut."
+with = ["this blasted key", "aliexpress", "the local locksmith"]
+started = "2020-01-16"
+where = [
+  "a factory in shenzen",
+  "a warehouse in auckland airport where it spent the entire covid lockdown",
+  "right here in this town",
+]
+now = "I received the key blanks, confirmed that they matched my key, and contacted some locksmiths until I found one (quite fortunately, a local) that could cut dimple keys given the blanks. Next I will test the blanks in my keyhole, to make sure they fit, and either this week or next I will finally be able to put this whole thing behind me!"
+media = [
+  "https://what.passcod.name/#keycasting",
+  "https://what.passcod.name/#keycasting-metal",
+  "https://twitter.com/passcod/status/1264458817430908929",
+]

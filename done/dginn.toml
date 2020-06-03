@@ -1,0 +1,8 @@
+what = "A personal finance tool for the budgetless."
+how = "Adandoned or indefinitely delayed. Or, rather, a finance/budgetting tool for me, who absolutely doesn’t work with budgets or comprehensive ledgers or putting my household into Xero or anything like that. I’ve tried. I’ve failed. I don’t really need a tool that will track things on a day to day basis, and I don’t need a tool to help me save. But I do need a tool that understands personal finance: incomes, expenses, tax; costs that are always the same on some kind of schedule, costs that are within a range on average, one-off purchases, etc. I’m interested in knowing how much I’m putting away every month, quarter, year; in seeing how much the model differs from the reality; and in having a bird’s eye view of everything I gain and spend, normalised and denormalised, graphed, smoothed, and averaged, to be used as a tool to make informed decisions about the future. In the end, this is what I’m trying for: a tool to empower."
+with = ["glitch", "vue", "remarkable"]
+where = "https://dginn.glitch.com"
+started = "2019-05-14"
+media = [
+  "https://twitter.com/passcod/status/1128230049746808832",
+]

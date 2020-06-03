@@ -1,0 +1,10 @@
+what = "Reviewing my Twitter blocklist"
+how = "Wrote a couple scripts to import it into a Postgres database, and then tried to go through."
+with = ["postgres", "rust", "omelette"]
+where = "local"
+started = "2019-06-15"
+finished = "2020-05-01"
+now = "Lost the data, and cannot bother reloading it. Identifying false positives was highly time consuming and draining, and the idea of either expiring or wiping the slate clean are a no go for me. I don't want to forgive the tens of thousands of vile racists and fascists just to spare the few people that are on there undeservedly... and I do unblock when I stumble upon them in threads and stuff."
+media = [
+  "https://twitter.com/passcod/status/1183178381216509958",
+]

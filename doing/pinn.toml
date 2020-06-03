@@ -3,7 +3,7 @@ how = "The idea so far is to track both what I want to read, what I’m reading,
 with = ["firefox", "web-ext", "es modules", "automerge", "crdt"]
 where = "github:passcod/pinn"
 started = "2019-04-19"
-now = "Scaffolding the UI and trying to figure out the data layer."
+now = "Would still like to do it but is heavily deprioritised."
 media = [
   "https://twitter.com/passcod/status/1119236020954755072",
   "https://twitter.com/passcod/status/1121013733533175809",

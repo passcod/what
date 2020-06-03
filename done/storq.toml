@@ -3,6 +3,8 @@ how = "I sketched this over a few days and the readme has more but I’m not ent
 with = ["rust", "sled", "wasm"]
 where = "github:passcod/storq"
 started = "2019-06-15"
+now = "Abandoned."
+finished = "2020-06-02"
 media = [
   "https://twitter.com/passcod/status/1176810960520003585",
   "https://twitter.com/passcod/status/1177809141491847168",

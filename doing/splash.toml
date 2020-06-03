@@ -3,6 +3,7 @@ how = "Taking the original Fortran source and notes and memos etc and translatin
 with = ["rust", "itm docs", "memos", "fortran", "horrifyingly few test vectors"]
 where = "github:passcod/splash"
 started = "2018-07-27"
+now = "Still want to do it, heavily deprioritised."
 media = [
   "https://twitter.com/passcod/status/1173065130159984640",
   "https://twitter.com/passcod/status/1176449556130590720",
