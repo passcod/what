@@ -3,6 +3,7 @@ how = "Omelette is a suite of personal archiving tools for tweets. The current v
 with = ["rust", "egg-mode", "reqwest", "diesel", "postgres"]
 where = "github:passcod/omelette"
 started = "2019-05-02"
+finished = "2020-04-01"
 now = "Lost interest"
 media = [
   "https://twitter.com/cabel/status/1121610739133734912",
