@@ -1,0 +1,13 @@
+name = "The Caretaker Model"
+what = "A different contribution model and workflow for open software projects that redistributes work more fairly, operates at higher trust, and allows projects to survive and grow even if the creator is mostly checked out, with very little effort required on their part."
+how = "I'm writing the text of the model and making a website that can be linked to for contributors to quickly get information about what they can do and how, in addition to the long form description."
+with = ["words", "jekyll"]
+started = "2020-05-24"
+now = "Got the structure of the website down, as well as art and design, plus the first two sections of the text."
+where = [
+  "https://caretaker.passcod.name",
+  "https://github.com/passcod/caretaker",
+]
+media = [
+  "https://twitter.com/passcod/status/1264438548620443649",
+]
