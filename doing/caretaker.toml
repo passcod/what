@@ -3,10 +3,11 @@ what = "A different contribution model and workflow for open software projects t
 how = "I'm writing the text of the model and making a website that can be linked to for contributors to quickly get information about what they can do and how, in addition to the long form description."
 with = ["words", "jekyll"]
 started = "2020-05-16"
-now = "Got the structure of the website down, as well as art and design, plus the first two sections of the text."
+now = "Some mid-draft revisions down, simplified part of the concept, the text outline, and got to about 1/3rd down the full draft."
 where = [
   "https://caretaker.passcod.name",
   "https://github.com/passcod/caretaker",
+  "https://nanowrimo.org/participants/passcod/projects/the-caretaker-model",
 ]
 media = [
   "https://twitter.com/passcod/status/1264438548620443649",
