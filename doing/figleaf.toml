@@ -1,4 +1,4 @@
-what = "“Crackfic-taken-seriously in the form of an open-source project readme,” the configuration library."
+what = "“Crackfic-taken-seriously in the form of an open software project readme,” the configuration library."
 how = "It started as a redesign of config-rs. Then I started adding stuff. Then I abandoned all pretense of this being at all realistic and started just going wild. Then I figured I might as well make document it all so thoroughly and consistently it could actually plausibly have an implementation. That's where I'm at. When done I'll see if I can put it up on AO3 somehow."
 with = ["rust", "markdown", "nightmares"]
 where = "github:passcod/figleaf"
