@@ -3,7 +3,7 @@ what = "A different contribution model and workflow for open software projects t
 how = "I'm writing the text of the model and making a website that can be linked to for contributors to quickly get information about what they can do and how, in addition to the long form description."
 with = ["words", "jekyll"]
 started = "2020-05-16"
-now = "Some mid-draft revisions down, simplified part of the concept, the text outline, and got to about 1/3rd down the full draft."
+now = "Halfway done with the initial draft."
 where = [
   "https://caretaker.passcod.name",
   "https://github.com/passcod/caretaker",
