@@ -3,7 +3,7 @@ how = "Mead is a pretty simple recipe, really: take honey, add water, optionally
 with = ["clover/mixed-flower honey", "bottled water", "whole pears", "various bottles"]
 where = "home"
 started = "2019-08-07"
-now = "It's been almost a year, and some of it is looking pretty good! Some bottles weren't sealed properly and have suspect growths, and some bottles don't really seem to have fermented. I will be taking a look and possibly try to salvage half the batch by adding EC1118 yeast."
+now = "After 364 days... I reopened all bottles, tested taste and carbonation, and recombined/split the lot over four batches, adding varying amounts of EC1118. I vented the bottles twice a day, then once a day, for a week, and finally stored them back for another round. Next inspection around Christmas!"
 media = [
   "https://twitter.com/passcod/status/523623720770732032",
   "https://twitter.com/passcod/status/1157232368647725057",
@@ -11,4 +11,5 @@ media = [
   "https://twitter.com/passcod/status/1157507737573478400",
   "https://twitter.com/passcod/status/1171190139873193985",
   "https://twitter.com/passcod/status/1188323060887089152",
+  "https://twitter.com/passcod/status/1288394668946812935",
 ]
