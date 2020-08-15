@@ -1,0 +1,10 @@
+what = "A Discord middleware for writing Discord bots"
+how = "The principle is to eat the Discord API and output it as structured requests to a local HTTP server. The server can then respond, generating events in return that are translated and sent back up to Discord. The advantage lies in using the HTTP server stack, which means notably that the Accord target could be an nginx server, which could then direct different requests to different backends, add caching, load-balancing, a/b and canary deployments, etc... without having to write that common code (as it’s built in to nginx). Furthermore, client implementations become restartable with no downtime, it's possible to write parts of servers in different languages and stacks, and everything speaks an extremely common protocol, which means there are _tonnes_ of tooling."
+with = ["rust", "serenity", "twilight", "surf"]
+where = "github:passcod/accord"
+started = "2020-07-26"
+now = "Active prototyping: receiving message create events and figuring out payloads and headers."
+media = [
+  "https://twitter.com/passcod/status/1287114492250165248",
+  "https://twitter.com/passcod/status/1294610133578731522",
+]

@@ -3,7 +3,7 @@ how = "I want to get locales in there as well as voice, and the Ruby implementat
 with = ["Rust", "serenity (discord client)", "config-rs", "Fluent (l10n)", "diesel (postgres initially)"]
 where = "github:storily/garrire"
 started = "2019-07-07"
-now = "While the serenity-based instance is in production, the dawn trial didn't really go anywhere. I now want to investigate a different approach entirely based on translating the API to http calls to a local server, and implementing the actual functionality in scripts or adhoc servers routed via nginx instead of a monolithic / custom plugin system approach. This is eventuating in a project called accord, see the rogare card."
+now = "While the serenity-based instance is in production, the dawn trial didn't really go anywhere. I now want to investigate a different approach entirely based on translating the API to http calls to a local server, and implementing the actual functionality in scripts or adhoc servers routed via nginx instead of a monolithic / custom plugin system approach. This is eventuating in a project called accord."
 media = [
   "https://twitter.com/passcod/status/1248854499772391425",
   "https://twitter.com/passcod/status/1148485443060523008",
