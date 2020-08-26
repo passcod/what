@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>What is passcod working on now?</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>What is <a href="https://passcod.name">passcod</a> working on now?</h1>
+    
+    <article id="accord" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#accord">accord</a></h2>
+        <p class="what">A Discord middleware for writing Discord&nbsp;bots</p>
+        <time class="started" datetime="2020-07-26T12:00:00.000+12:00"
+          title="2020-07-26T12:00:00.000+12:00">Started 26 July 2020</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>The principle is to eat the Discord API and output it as structured requests to a local HTTP server. The server can then respond, generating events in return that are translated and sent back up to Discord. The advantage lies in using the HTTP server stack, which means notably that the Accord target could be an nginx server, which could then direct different requests to different backends, add caching, load-balancing, a/b and canary deployments, etc... without having to write that common code (as it’s built in to nginx). Furthermore, client implementations become restartable with no downtime, it's possible to write parts of servers in different languages and stacks, and everything speaks an extremely common protocol, which means there are _tonnes_ of&nbsp;tooling.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Active prototyping: receiving message create events and figuring out payloads and&nbsp;headers.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/accord.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">serenity</span>, <span class="with">twilight</span>, <span class="with">surf</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/accord">https://github.com/passcod/accord</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1287114492250165248">https://twitter.com/passcod/status/1287114492250165248</a></li>
+<li><a href="https://twitter.com/passcod/status/1294610133578731522">https://twitter.com/passcod/status/1294610133578731522</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="the-caretaker-system" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#the-caretaker-system">The Caretaker System</a></h2>
+        <p class="what">A “addon” contribution system for open software projects that trades higher trust for less effort on the maintainers parts, allowing projects to survive and grow even if the creator is mostly checked&nbsp;out.</p>
+        <time class="started" datetime="2020-05-16T12:00:00.000+12:00"
+          title="2020-05-16T12:00:00.000+12:00">Started 16 May 2020</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I'm writing the text of the system and making a website that can be linked to for contributors to quickly get information about what they can do and how, in addition to the long form&nbsp;description.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Halfway done with the initial draft. Renamed from model to&nbsp;system.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/caretaker.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">words</span>, <span class="with">jekyll</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://caretaker.passcod.name">https://caretaker.passcod.name</a></li>
+<li><a href="https://github.com/passcod/caretaker">https://github.com/passcod/caretaker</a></li>
+<li><a href="https://nanowrimo.org/participants/passcod/projects/the-caretaker-model">https://nanowrimo.org/participants/passcod/projects/the-caretaker-model</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1264438548620443649">https://twitter.com/passcod/status/1264438548620443649</a></li>
+<li><a href="https://twitter.com/passcod/status/1261450928915243009">https://twitter.com/passcod/status/1261450928915243009</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="defnew" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#defnew">defnew</a></h2>
+        <p class="what">A tool kit for manipulating C ABI like data structures and interacting with libc... *on the&nbsp;shell*!</p>
+        <time class="started" datetime="2020-04-08T12:00:00.000+12:00"
+          title="2020-04-08T12:00:00.000+12:00">Started 8 April 2020</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Copious amounts of bad Rust... I'm not going for pretty, as this is a tool that I want for me, and not really going for public consumption, though this will be readily usable out of the box once&nbsp;done.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Starting on the penultimate main tool, which will make it possible to call arbitrary libc functions from the&nbsp;shell.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/defnew.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">words</span>, <span class="with">lexpr crate</span>, <span class="with">libc crate</span>, <span class="with">unholy parsing of rustdoc output</span>, <span class="with">clap 3</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/defnew">https://github.com/passcod/defnew</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1263471501732392961">https://twitter.com/passcod/status/1263471501732392961</a></li>
+<li><a href="https://twitter.com/passcod/status/1263139194739646465">https://twitter.com/passcod/status/1263139194739646465</a></li>
+<li><a href="https://twitter.com/passcod/status/1262725184546463744">https://twitter.com/passcod/status/1262725184546463744</a></li>
+<li><a href="https://twitter.com/passcod/status/1262369190972776455">https://twitter.com/passcod/status/1262369190972776455</a></li>
+<li><a href="https://twitter.com/passcod/status/1259133801592053760">https://twitter.com/passcod/status/1259133801592053760</a></li>
+<li><a href="https://twitter.com/passcod/status/1254009624224649217">https://twitter.com/passcod/status/1254009624224649217</a></li>
+<li><a href="https://twitter.com/passcod/status/1250993116674273280">https://twitter.com/passcod/status/1250993116674273280</a></li>
+<li><a href="https://twitter.com/passcod/status/1247552976777924611">https://twitter.com/passcod/status/1247552976777924611</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="figleaf" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#figleaf">figleaf</a></h2>
+        <p class="what">“Crackfic-taken-seriously in the form of an open software project readme,” the configuration&nbsp;library.</p>
+        <time class="started" datetime="2019-11-08T13:00:00.000+13:00"
+          title="2019-11-08T13:00:00.000+13:00">Started 8 November 2019</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>It started as a redesign of config-rs. Then I started adding stuff. Then I abandoned all pretense of this being at all realistic and started just going wild. Then I figured I might as well make document it all so thoroughly and consistently it could actually plausibly have an implementation. That's where I'm at. When done I'll see if I can put it up on AO3&nbsp;somehow.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Pondering whether I want to finish this or abandon&nbsp;it.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/figleaf.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">markdown</span>, <span class="with">nightmares</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/figleaf">https://github.com/passcod/figleaf</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1192727580832493569">https://twitter.com/passcod/status/1192727580832493569</a></li>
+<li><a href="https://twitter.com/passcod/status/1192966242321092609">https://twitter.com/passcod/status/1192966242321092609</a></li>
+<li><a href="https://twitter.com/passcod/status/1193804512621817857">https://twitter.com/passcod/status/1193804512621817857</a></li>
+<li><a href="https://twitter.com/passcod/status/1194146075000487936">https://twitter.com/passcod/status/1194146075000487936</a></li>
+<li><a href="https://twitter.com/passcod/status/1195532802998951937">https://twitter.com/passcod/status/1195532802998951937</a></li>
+<li><a href="https://twitter.com/passcod/status/1195550437602017281">https://twitter.com/passcod/status/1195550437602017281</a></li>
+<li><a href="https://twitter.com/passcod/status/1202810348799057920">https://twitter.com/passcod/status/1202810348799057920</a></li>
+<li><a href="https://twitter.com/passcod/status/1202878318120300544">https://twitter.com/passcod/status/1202878318120300544</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="mead" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#mead">mead</a></h2>
+        <p class="what">A batch of&nbsp;honeymead</p>
+        <time class="started" datetime="2019-08-07T12:00:00.000+12:00"
+          title="2019-08-07T12:00:00.000+12:00">Started 7 August 2019</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Mead is a pretty simple recipe, really: take honey, add water, optionally add something to help yeasting (I used pears), add six to twenty-four months of time. This batch follows a much earlier attempt in&nbsp;2014.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">After 364 days... I reopened all bottles, tested taste and carbonation, and recombined/split the lot over four batches, adding varying amounts of EC1118. I vented the bottles twice a day, then once a day, for a week, and finally stored them back for another round. Next inspection around&nbsp;Christmas!</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/mead.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">clover/mixed-flower honey</span>, <span class="with">bottled water</span>, <span class="with">whole pears</span>, <span class="with">various bottles</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="home">home</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/523623720770732032">https://twitter.com/passcod/status/523623720770732032</a></li>
+<li><a href="https://twitter.com/passcod/status/1157232368647725057">https://twitter.com/passcod/status/1157232368647725057</a></li>
+<li><a href="https://twitter.com/passcod/status/1136828322258702336">https://twitter.com/passcod/status/1136828322258702336</a></li>
+<li><a href="https://twitter.com/passcod/status/1157507737573478400">https://twitter.com/passcod/status/1157507737573478400</a></li>
+<li><a href="https://twitter.com/passcod/status/1171190139873193985">https://twitter.com/passcod/status/1171190139873193985</a></li>
+<li><a href="https://twitter.com/passcod/status/1188323060887089152">https://twitter.com/passcod/status/1188323060887089152</a></li>
+<li><a href="https://twitter.com/passcod/status/1288394668946812935">https://twitter.com/passcod/status/1288394668946812935</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="garr-re" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#garr-re">garrīre</a></h2>
+        <p class="what">A rewrite of rogare in&nbsp;Rust</p>
+        <time class="started" datetime="2019-07-07T12:00:00.000+12:00"
+          title="2019-07-07T12:00:00.000+12:00">Started 7 July 2019</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I want to get locales in there as well as voice, and the Ruby implementation just isn't solid enough for this kind of thing. There’s also a lot of cruft in rogare I’d like to avoid, bringing over only the Good&nbsp;Parts.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">While the serenity-based instance is in production, the dawn trial didn't really go anywhere. I now want to investigate a different approach entirely based on translating the API to http calls to a local server, and implementing the actual functionality in scripts or adhoc servers routed via nginx instead of a monolithic / custom plugin system approach. This is eventuating in a project called&nbsp;accord.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/garrīre.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">Rust</span>, <span class="with">serenity (discord client)</span>, <span class="with">config-rs</span>, <span class="with">Fluent (l10n)</span>, <span class="with">diesel (postgres initially)</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/storily/garrire">https://github.com/storily/garrire</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1248854499772391425">https://twitter.com/passcod/status/1248854499772391425</a></li>
+<li><a href="https://twitter.com/passcod/status/1148485443060523008">https://twitter.com/passcod/status/1148485443060523008</a></li>
+<li><a href="https://twitter.com/passcod/status/1175754128938565632">https://twitter.com/passcod/status/1175754128938565632</a></li>
+<li><a href="https://twitter.com/passcod/status/1179950538764382209">https://twitter.com/passcod/status/1179950538764382209</a></li>
+<li><a href="https://twitter.com/passcod/status/1181208515509018624">https://twitter.com/passcod/status/1181208515509018624</a></li>
+<li><a href="https://twitter.com/passcod/status/1182937660194582529">https://twitter.com/passcod/status/1182937660194582529</a></li>
+<li><a href="https://twitter.com/passcod/status/1183000979433607168">https://twitter.com/passcod/status/1183000979433607168</a></li>
+<li><a href="https://twitter.com/passcod/status/1184024184399073280">https://twitter.com/passcod/status/1184024184399073280</a></li>
+<li><a href="https://twitter.com/passcod/status/1186166780026216449">https://twitter.com/passcod/status/1186166780026216449</a></li>
+<li><a href="https://twitter.com/passcod/status/1185371114739884038">https://twitter.com/passcod/status/1185371114739884038</a></li>
+<li><a href="https://twitter.com/passcod/status/1187727565286453254">https://twitter.com/passcod/status/1187727565286453254</a></li>
+<li><a href="https://twitter.com/passcod/status/1189463018280640512">https://twitter.com/passcod/status/1189463018280640512</a></li>
+<li><a href="https://twitter.com/passcod/status/1189516315402260481">https://twitter.com/passcod/status/1189516315402260481</a></li>
+<li><a href="https://twitter.com/passcod/status/1189522641587097600">https://twitter.com/passcod/status/1189522641587097600</a></li>
+<li><a href="https://twitter.com/passcod/status/1189846421194723330">https://twitter.com/passcod/status/1189846421194723330</a></li>
+<li><a href="https://twitter.com/passcod/status/1190034675051499525">https://twitter.com/passcod/status/1190034675051499525</a></li>
+<li><a href="https://twitter.com/passcod/status/1191663848182317056">https://twitter.com/passcod/status/1191663848182317056</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="pinn" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#pinn">pinn</a></h2>
+        <p class="what">A browser extension companion to track and manage the fanfic I&nbsp;read.</p>
+        <time class="started" datetime="2019-04-19T12:00:00.000+12:00"
+          title="2019-04-19T12:00:00.000+12:00">Started 19 April 2019</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>The idea so far is to track both what I want to read, what I’m reading, following, etc, all with a minimal amount of interactions. Simply visiting a fanfic page should track it, and some work with the Intersection Observer API should yield a pretty accurate detection of actively reading a fic vs just having it open or looking through it without really&nbsp;reading.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Would still like to do it but is heavily&nbsp;deprioritised.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/pinn.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">firefox</span>, <span class="with">web-ext</span>, <span class="with">es modules</span>, <span class="with">automerge</span>, <span class="with">crdt</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/pinn">https://github.com/passcod/pinn</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1119236020954755072">https://twitter.com/passcod/status/1119236020954755072</a></li>
+<li><a href="https://twitter.com/passcod/status/1121013733533175809">https://twitter.com/passcod/status/1121013733533175809</a></li>
+<li><a href="https://twitter.com/passcod/status/1121754299850084352">https://twitter.com/passcod/status/1121754299850084352</a></li>
+<li><a href="https://twitter.com/passcod/status/1122820390521163778">https://twitter.com/passcod/status/1122820390521163778</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="percy-w-witch" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#percy-w-witch">percy w.: witch</a></h2>
+        <p class="what">A Harry Potter fanfic centered around Percy&nbsp;Weasley</p>
+        <time class="started" datetime="2019-02-26T13:00:00.000+13:00"
+          title="2019-02-26T13:00:00.000+13:00">Started 26 February 2019</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>A bit crack-taken-seriously, a bit riff on badass/lazy tropes, a bit inspired by Agnes Nutter: Witch, a bit taken with the utter madness of some Hobbit fics I’ve read recently. It has the potential to be fairly funny even if I’m being a downer and writing super-sad character development up front (because Percy was a child during the wizarding war, and that can’t have been all fucking sunny days and happy&nbsp;occasions).</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Writing various unsorted&nbsp;scenes</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/percy-fic.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">words</span>, <span class="with">ao3</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1100685974055485441">https://twitter.com/passcod/status/1100685974055485441</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="earthquake-sky" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#earthquake-sky">Earthquake Sky</a></h2>
+        <p class="what">An experimental art piece representing a map of all earthquakes around Aotearoa like a star&nbsp;atlas.</p>
+        <time class="started" datetime="2018-10-01T13:00:00.000+13:00"
+          title="2018-10-01T13:00:00.000+13:00">Started 1 October 2018</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>The substrate is an A0 piece of white cardboard/foamboard. On it I'm placing hundreds of dots of varying sizes using clear nail polish, in the rough locations of all earthquakes since 1900 (as much data as is available) in the land and sea around Aotearoa. Once done, I will splash blue inks over the board, then wash lightly. The result should be that where the polish is, the ink slides off, resulting in a dark blue background with white dots peeking out. Ultimately, this is expected to be an experience both near and afar, with the polish providing a tactile&nbsp;feel.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Picked it back up after many months, starting on the mass concentrations of the North part of the&nbsp;image.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/earthquake-sky.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">foamboard</span>, <span class="with">Morgan Taylor clear nail polish base coat</span>, <span class="with">GeoNet and USDS data</span>, <span class="with">QGis</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1046684642030411777">https://twitter.com/passcod/status/1046684642030411777</a></li>
+<li><a href="https://twitter.com/passcod/status/1047096975730982912">https://twitter.com/passcod/status/1047096975730982912</a></li>
+<li><a href="https://twitter.com/passcod/status/1055345962061750272">https://twitter.com/passcod/status/1055345962061750272</a></li>
+<li><a href="https://blog.passcod.name/2018/nov/10/monthly-update">https://blog.passcod.name/2018/nov/10/monthly-update</a></li>
+<li><a href="https://twitter.com/passcod/status/1179950538764382209">https://twitter.com/passcod/status/1179950538764382209</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="splash" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#splash">splash</a></h2>
+        <p class="what">A reimplementation of the RF propagation model&nbsp;“ITM”</p>
+        <time class="started" datetime="2018-07-27T12:00:00.000+12:00"
+          title="2018-07-27T12:00:00.000+12:00">Started 27 July 2018</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Taking the original Fortran source and notes and memos etc and translating that in Rust, then re-referencing everything to the documents, changing all function and variable names to things that are legible and make sense, and adding lots of high-quality inline documentation. The end goal being to have a safe implementation that can be read entirely standalone to understand what the algorithm is doing. The secondary goal is to reimplement a subset of what the SPLAT! RF program does but more modern, e.g. taking in GDAL data as terrain input, outputting things in a more standard format, supporting arbitrary resolutions rather than hardcoding only two modes, and being able to be&nbsp;parallelisable.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Still want to do it, heavily&nbsp;deprioritised.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/splash.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">itm docs</span>, <span class="with">memos</span>, <span class="with">fortran</span>, <span class="with">horrifyingly few test vectors</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/splash">https://github.com/passcod/splash</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1173065130159984640">https://twitter.com/passcod/status/1173065130159984640</a></li>
+<li><a href="https://twitter.com/passcod/status/1176449556130590720">https://twitter.com/passcod/status/1176449556130590720</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="cargo-watchexec" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#cargo-watchexec">cargo-watchexec</a></h2>
+        <p class="what">Cargo Watch and Watchexec maintenance and&nbsp;development</p>
+        <time class="started" datetime="2014-08-01T12:00:00.000+12:00"
+          title="2014-08-01T12:00:00.000+12:00">Started 1 August 2014</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Triage and reviewing pull requests and cleaning up and implementing features and the&nbsp;works</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">This is gated on finishing up Caretaker for Cargo Watch, and defnew takes priority&nbsp;also.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/cargo-watchexec.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">cargo-watch (woo dogfooding!)</span>, <span class="with">contributors (so thankful)</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/cargo-watch">https://github.com/passcod/cargo-watch</a></li>
+<li><a href="https://github.com/watchexec/watchexec">https://github.com/watchexec/watchexec</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1173065130159984640">https://twitter.com/passcod/status/1173065130159984640</a></li>
+<li><a href="https://twitter.com/passcod/status/1188711837937717249">https://twitter.com/passcod/status/1188711837937717249</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="rogare" class="doing" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#rogare">rogare</a></h2>
+        <p class="what">A Discord bot for a local writer/nanowrimo&nbsp;group.</p>
+        <time class="started" datetime="2014-05-09T12:00:00.000+12:00"
+          title="2014-05-09T12:00:00.000+12:00">Started 9 May 2014</time>
+        
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>It’s a custom Ruby bot with its own custom framework. Originally it grew from an IRC bot using the Cinch framework, but when the community moved to Discord the framework got adapted, and then refactored. The bot has a low key sassy attitude, provides a bunch of common small tools (like dice, random pickers and choosers, writing prompts, etc), but also has a pretty good “wordwar” implementation, and its prized jewel: a name generator seeded from some 150 000 actual names from various&nbsp;sources.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">To be deprecated and rebuilt under&nbsp;accord.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/doing/rogare.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">ruby</span>, <span class="with">discord-rb</span>, <span class="with">sequel</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/storily/rogare">https://github.com/storily/rogare</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1065858657680711680">https://twitter.com/passcod/status/1065858657680711680</a></li>
+<li><a href="https://twitter.com/passcod/status/1067252714831151104">https://twitter.com/passcod/status/1067252714831151104</a></li>
+<li><a href="https://twitter.com/passcod/status/1073109093181579265">https://twitter.com/passcod/status/1073109093181579265</a></li>
+<li><a href="https://twitter.com/passcod/status/1173065130159984640">https://twitter.com/passcod/status/1173065130159984640</a></li>
+<li><a href="https://twitter.com/passcod/status/1175754128938565632">https://twitter.com/passcod/status/1175754128938565632</a></li>
+<li><a href="https://twitter.com/passcod/status/1287114492250165248">https://twitter.com/passcod/status/1287114492250165248</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="keycopying" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#keycopying">keycopying</a></h2>
+        <p class="what">Final installment of the key&nbsp;saga</p>
+        <time class="started" datetime="2020-01-16T13:00:00.000+13:00"
+          title="2020-01-16T13:00:00.000+13:00">Started 16 January 2020</time>
+        <time class="finished" datetime="2020-06-05T12:00:00.000+12:00"
+          title="2020-06-05T12:00:00.000+12:00">Finished 5 June 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>In January I ordered key blanks that matched my key from AliExpress, in order to maybe finally be able to either cut my own keys or get them&nbsp;cut.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Keys were cut and tested, all&nbsp;done!</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/keycopying.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">this blasted key</span>, <span class="with">aliexpress</span>, <span class="with">the local locksmith</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="a factory in shenzen">a factory in shenzen</a></li>
+<li><a href="a warehouse in auckland airport where it spent the entire covid lockdown">a warehouse in auckland airport where it spent the entire covid lockdown</a></li>
+<li><a href="right here in this town">right here in this town</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://what.passcod.name/#keycasting">https://what.passcod.name/#keycasting</a></li>
+<li><a href="https://what.passcod.name/#keycasting-metal">https://what.passcod.name/#keycasting-metal</a></li>
+<li><a href="https://twitter.com/passcod/status/1264458817430908929">https://twitter.com/passcod/status/1264458817430908929</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="ct" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#ct">ct</a></h2>
+        <p class="what">ls and cat in one&nbsp;tool</p>
+        <time class="started" datetime="2019-12-10T13:00:00.000+13:00"
+          title="2019-12-10T13:00:00.000+13:00">Started 10 December 2019</time>
+        <time class="finished" datetime="2020-06-03T12:00:00.000+12:00"
+          title="2020-06-03T12:00:00.000+12:00">Finished 3 June 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>It uses exa to provide ls-like functionality, and if it's passed a file it prints it out instead, so it’s both cat and ls in a single two-letter tool, which makes it more convenient when exploring a filesystem, instead of having to edit the head of the line to swap&nbsp;tool.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/ct.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">exa</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1267966677003587585">https://twitter.com/passcod/status/1267966677003587585</a></li>
+<li><a href="https://twitter.com/passcod/status/1204334618733735936">https://twitter.com/passcod/status/1204334618733735936</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="keycasting-metal" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#keycasting-metal">keycasting-metal</a></h2>
+        <p class="what">Keycasting: the return! Metal&nbsp;edition</p>
+        <time class="started" datetime="2019-06-29T12:00:00.000+12:00"
+          title="2019-06-29T12:00:00.000+12:00">Started 29 June 2019</time>
+        <time class="finished" datetime="2020-06-03T12:00:00.000+12:00"
+          title="2020-06-03T12:00:00.000+12:00">Finished 3 June 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I’m very much not doing my own metal casting, thank you. Instead I’ll be navigating casting wax and foundries for a very small run of a very small piece. From cursory research, I ideally want to cast some copies in beeswax, send that to a foundry that can pour Nickel Silver (or brass as a fallback), and then get my&nbsp;keys!</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/keycasting-metal.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">this blasted key</span>, <span class="with">small local foundries</span>, <span class="with">idk yet</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://www.safoundry.co.nz/">https://www.safoundry.co.nz/</a></li>
+<li><a href="https://www.castingshop.co.nz/">https://www.castingshop.co.nz/</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://what.passcod.name/#keycasting">https://what.passcod.name/#keycasting</a></li>
+<li><a href="https://twitter.com/passcod/status/1144847407378624517">https://twitter.com/passcod/status/1144847407378624517</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="storq" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#storq">storq</a></h2>
+        <p class="what">A store for&nbsp;queues</p>
+        <time class="started" datetime="2019-06-15T12:00:00.000+12:00"
+          title="2019-06-15T12:00:00.000+12:00">Started 15 June 2019</time>
+        <time class="finished" datetime="2020-06-02T12:00:00.000+12:00"
+          title="2020-06-02T12:00:00.000+12:00">Finished 2 June 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I sketched this over a few days and the readme has more but I’m not entirely sure where its heart lies yet. It’s a low-level store focused around medium-scale queues with some added advanced features. Nothing too terribly exciting, but is being written to enable more stuff higher&nbsp;up.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">&nbsp;Abandoned.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/storq.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">sled</span>, <span class="with">wasm</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/storq">https://github.com/passcod/storq</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1176810960520003585">https://twitter.com/passcod/status/1176810960520003585</a></li>
+<li><a href="https://twitter.com/passcod/status/1177809141491847168">https://twitter.com/passcod/status/1177809141491847168</a></li>
+<li><a href="https://twitter.com/passcod/status/1178150528196517888">https://twitter.com/passcod/status/1178150528196517888</a></li>
+<li><a href="https://twitter.com/passcod/status/1178275070013132800">https://twitter.com/passcod/status/1178275070013132800</a></li>
+<li><a href="https://twitter.com/wasmerio/status/1178399426936627200">https://twitter.com/wasmerio/status/1178399426936627200</a></li>
+<li><a href="https://twitter.com/passcod/status/1179335228923535360">https://twitter.com/passcod/status/1179335228923535360</a></li>
+<li><a href="https://twitter.com/passcod/status/1179950538764382209">https://twitter.com/passcod/status/1179950538764382209</a></li>
+<li><a href="https://twitter.com/passcod/status/1180370658183696384">https://twitter.com/passcod/status/1180370658183696384</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="reviewing-blocks" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#reviewing-blocks">reviewing-blocks</a></h2>
+        <p class="what">Reviewing my Twitter&nbsp;blocklist</p>
+        <time class="started" datetime="2019-06-15T12:00:00.000+12:00"
+          title="2019-06-15T12:00:00.000+12:00">Started 15 June 2019</time>
+        <time class="finished" datetime="2020-05-01T12:00:00.000+12:00"
+          title="2020-05-01T12:00:00.000+12:00">Finished 1 May 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Wrote a couple scripts to import it into a Postgres database, and then tried to go&nbsp;through.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Lost the data, and cannot bother reloading it. Identifying false positives was highly time consuming and draining, and the idea of either expiring or wiping the slate clean are a no go for me. I don't want to forgive the tens of thousands of vile racists and fascists just to spare the few people that are on there undeservedly... and I do unblock when I stumble upon them in threads and&nbsp;stuff.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/reviewing-blocks.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">postgres</span>, <span class="with">rust</span>, <span class="with">omelette</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="local">local</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1183178381216509958">https://twitter.com/passcod/status/1183178381216509958</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="dginn" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#dginn">dginn</a></h2>
+        <p class="what">A personal finance tool for the&nbsp;budgetless.</p>
+        <time class="started" datetime="2019-05-14T12:00:00.000+12:00"
+          title="2019-05-14T12:00:00.000+12:00">Started 14 May 2019</time>
+        <time class="finished" datetime="2020-04-01T13:00:00.000+13:00"
+          title="2020-04-01T13:00:00.000+13:00">Finished 1 April 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Or, rather, a finance/budgetting tool for me, who absolutely doesn’t work with budgets or comprehensive ledgers or putting my household into Xero or anything like that. I’ve tried. I’ve failed. I don’t really need a tool that will track things on a day to day basis, and I don’t need a tool to help me save. But I do need a tool that understands personal finance: incomes, expenses, tax; costs that are always the same on some kind of schedule, costs that are within a range on average, one-off purchases, etc. I’m interested in knowing how much I’m putting away every month, quarter, year; in seeing how much the model differs from the reality; and in having a bird’s eye view of everything I gain and spend, normalised and denormalised, graphed, smoothed, and averaged, to be used as a tool to make informed decisions about the future. In the end, this is what I’m trying for: a tool to&nbsp;empower.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Adandoned or indefinitely&nbsp;delayed.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/dginn.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">glitch</span>, <span class="with">vue</span>, <span class="with">remarkable</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://dginn.glitch.com">https://dginn.glitch.com</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1128230049746808832">https://twitter.com/passcod/status/1128230049746808832</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="omelette-new-archive-format" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#omelette-new-archive-format">omelette-new-archive-format</a></h2>
+        <p class="what">Updating Omelette’s archive importer for the new&nbsp;format</p>
+        <time class="started" datetime="2019-05-02T12:00:00.000+12:00"
+          title="2019-05-02T12:00:00.000+12:00">Started 2 May 2019</time>
+        <time class="finished" datetime="2020-04-01T13:00:00.000+13:00"
+          title="2020-04-01T13:00:00.000+13:00">Finished 1 April 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Omelette is a suite of personal archiving tools for tweets. The current version reads the old “slim” archive format, with only few details... I plan to upgrade that tool to the “full” archive format, which is reported to contain a lot more&nbsp;details.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Lost&nbsp;interest</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/omelette-new-archive-format.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">egg-mode</span>, <span class="with">reqwest</span>, <span class="with">diesel</span>, <span class="with">postgres</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/omelette">https://github.com/passcod/omelette</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/cabel/status/1121610739133734912">https://twitter.com/cabel/status/1121610739133734912</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="int-path" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#int-path">IntPath</a></h2>
+        <p class="what">A new library for interned path segments and paths with structural&nbsp;sharing.</p>
+        <time class="started" datetime="2018-06-26T12:00:00.000+12:00"
+          title="2018-06-26T12:00:00.000+12:00">Started 26 June 2018</time>
+        <time class="finished" datetime="2020-04-01T13:00:00.000+13:00"
+          title="2020-04-01T13:00:00.000+13:00">Finished 1 April 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>String interning is actually a few different programming techniques, which can go from static string interning, where a bunch of strings that will be used by the application are constants — generally this is on a larger and more systematic scale than defining a bunch of consts — to language-level (or VM-level) interning, like Ruby symbols which only exist once in the program, to fully-dynamic interning with a little runtime. IntPath is that last one. Or rather, IntSeg is that last one. IntSeg is based on a global concurrent hash map, which is initialised on program start. An IntSeg, an interned (path) segment, is an OsString that is stored uniquely but weakly inside the map, and where every “actual” copy is actually a strong pointer to that interned value. So every segment is only stored once, no matter where it’s created or accessed from, and unused segments take up no (actually some, but very little) space. Then IntPaths are built on top of that as, essentially, a Vec of IntSeg. That makes paths /a/b/c and /a/b/d use up only 4 path segments, instead of six. And 100 absolute paths with a common prefix of 10 segments and a unique suffix of 1 segment will only use 110 segments total. Additionally, segments don’t care about their position in the string, so the path /a/a/a/a/a uses one segment. There’s more, but that’s the general&nbsp;idea.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Idea discontinued once I stopped being involved with Notify, and thus mostly lost the motivation/reason for&nbsp;this.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/intpath.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">chashmap</span>, <span class="with">arc</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/intpath">https://github.com/passcod/intpath</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1143499298815954944">https://twitter.com/passcod/status/1143499298815954944</a></li>
+<li><a href="https://twitter.com/passcod/status/1144899073062735872">https://twitter.com/passcod/status/1144899073062735872</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="quarterlies" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#quarterlies">quarterlies</a></h2>
+        <p class="what">(Roughly) quarterly updates for&nbsp;patrons/sponsors/followers</p>
+        <time class="started" datetime="2019-10-20T13:00:00.000+13:00"
+          title="2019-10-20T13:00:00.000+13:00">Started 20 October 2019</time>
+        <time class="finished" datetime="2020-03-03T13:00:00.000+13:00"
+          title="2020-03-03T13:00:00.000+13:00">Finished 3 March 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Monthly didn't work, Yearly is too long, and I needed something to give financial&nbsp;supporters.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Discontinued the entire sponsorship thing, so no need for this&nbsp;lol.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/quarterlies.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">my poor fingers</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://www.patreon.com/posts/spring-2019-31102896">https://www.patreon.com/posts/spring-2019-31102896</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1182460264710471680">https://twitter.com/passcod/status/1182460264710471680</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="armstrong" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#armstrong">armstrong</a></h2>
+        <p class="what">A job system for a wonderful&nbsp;world.</p>
+        <time class="started" datetime="2018-11-22T13:00:00.000+13:00"
+          title="2018-11-22T13:00:00.000+13:00">Started 22 November 2018</time>
+        <time class="finished" datetime="2020-01-01T13:00:00.000+13:00"
+          title="2020-01-01T13:00:00.000+13:00">Finished 1 January 2020</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>This was about building a job system that offers rich workflow potential and excellent monitoring/auditability while also being very lightweight. Scalability and partition-tolerance are secondary concerns at the moment. Inspired by Gearman, but aiming to be a&nbsp;superset.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">&nbsp;Abandoned.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/armstrong.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">json-rpc</span>, <span class="with">websocket</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/armstrong">https://github.com/passcod/armstrong</a></li>
+<li><a href="https://github.com/passcod/gearbox">https://github.com/passcod/gearbox</a></li>
+<li><a href="https://github.com/passcod/gearbox-rs">https://github.com/passcod/gearbox-rs</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1085658418428276738">https://twitter.com/passcod/status/1085658418428276738</a></li>
+<li><a href="https://twitter.com/passcod/status/1086764854550192128">https://twitter.com/passcod/status/1086764854550192128</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="glass-hanger" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#glass-hanger">glass-hanger</a></h2>
+        <p class="what">A little bit of custom furniture to support four restaurant-style glass hanger racks without damaging anything in my rented&nbsp;appartment.</p>
+        <time class="started" datetime="2019-10-12T13:00:00.000+13:00"
+          title="2019-10-12T13:00:00.000+13:00">Started 12 October 2019</time>
+        <time class="finished" datetime="2019-10-17T13:00:00.000+13:00"
+          title="2019-10-17T13:00:00.000+13:00">Finished 17 October 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I designed it over a Saturday, went to buy the supplies that evening, built and assembled it the next day, then spent two evenings painting&nbsp;it.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/glass-hanger.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">plywood</span>, <span class="with">dressed pine timber</span>, <span class="with">box of screws</span>, <span class="with">wood glue</span>, <span class="with">dulux white mt aspiring sample pot</span>, <span class="with">excellent tools</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="home">home</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1182871117893005313">https://twitter.com/passcod/status/1182871117893005313</a></li>
+<li><a href="https://twitter.com/passcod/status/1182937660194582529">https://twitter.com/passcod/status/1182937660194582529</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="hashmap-entry-insert" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#hashmap-entry-insert">hashmap-entry-insert</a></h2>
+        <p class="what">A PR to Rust’s&nbsp;stdlib</p>
+        <time class="started" datetime="2019-09-21T12:00:00.000+12:00"
+          title="2019-09-21T12:00:00.000+12:00">Started 21 September 2019</time>
+        <time class="finished" datetime="2019-10-09T13:00:00.000+13:00"
+          title="2019-10-09T13:00:00.000+13:00">Finished 9 October 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Someone in the community discord wanted a feature and I was like “hey, why not try to implement it, that could be fun” (based on an existing but obsoleted&nbsp;PR).</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/hashmap-entry-insert.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">hashbrown</span>, <span class="with">rust</span>, <span class="with">simonsapin</span>, <span class="with">dtolnay</span>, <span class="with">amanieu</span>, <span class="with">dylan-dpc</span>, <span class="with">centril</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/rust-lang/rust/pull/64656">https://github.com/rust-lang/rust/pull/64656</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1178568262310879232">https://twitter.com/passcod/status/1178568262310879232</a></li>
+<li><a href="https://twitter.com/passcod/status/1180312263925780480">https://twitter.com/passcod/status/1180312263925780480</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="trebuchet" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#trebuchet">trebuchet</a></h2>
+        <p class="what">A deploy tool / experiment using Btrfs volume&nbsp;archives.</p>
+        <time class="started" datetime="2019-03-25T13:00:00.000+13:00"
+          title="2019-03-25T13:00:00.000+13:00">Started 25 March 2019</time>
+        <time class="finished" datetime="2019-10-03T13:00:00.000+13:00"
+          title="2019-10-03T13:00:00.000+13:00">Finished 3 October 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>The actual deploy tool is a client/server/agent suite with some neat features but aiming to be extremely light on resources, at least compared to many other tools I’ve tried. But the core underpinning, the main idea, comes from playing around with btrfs volumes/snapshots and the export/import commands on the tool. Essentially you can ask for an export of a volume, and you can ask for an export of a volume <b>based on another volume</b>, then on import, which can be on a completely different filesystem/disk/machine, as long as you have that same base volume, you can restore. So you can have filesystem-level diff archives on demand, with no awareness from the application being built/deployed, and everything is already in standard linux tools. It just needs some wrapping and&nbsp;managing.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">The btrfs stuff added too many constraints;&nbsp;abandoned.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/trebuchet.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">btrfs</span>, <span class="with">rust</span>, <span class="with">json-rpc</span>, <span class="with">websocket</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/trebuchet">https://github.com/passcod/trebuchet</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1110037271439261696">https://twitter.com/passcod/status/1110037271439261696</a></li>
+<li><a href="https://twitter.com/passcod/status/1110890661413187584">https://twitter.com/passcod/status/1110890661413187584</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="notify-5-0" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#notify-5-0">notify 5.0</a></h2>
+        <p class="what">The next release of the Notify file monitor&nbsp;library.</p>
+        <time class="started" datetime="2019-03-28T13:00:00.000+13:00"
+          title="2019-03-28T13:00:00.000+13:00">Started 28 March 2019</time>
+        <time class="finished" datetime="2019-09-02T12:00:00.000+12:00"
+          title="2019-09-02T12:00:00.000+12:00">Finished 2 September 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I’m refactoring: the event system (using the new system from the next branch and by this same act unifying the raw and debounced events), configuration (introducing runtime config, moving some notify features to opt-in instead of being always on), some naming (“raw” mode is not very descriptive in hindsight, so I’m calling it “immediate” mode&nbsp;now).</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">I abandoned Notify and then gave it over to another&nbsp;team.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/notify-5.0.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/notify">https://github.com/passcod/notify</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1119943511095136257">https://twitter.com/passcod/status/1119943511095136257</a></li>
+<li><a href="https://twitter.com/passcod/status/1124936733190045696">https://twitter.com/passcod/status/1124936733190045696</a></li>
+<li><a href="https://twitter.com/passcod/status/1135517583807922176">https://twitter.com/passcod/status/1135517583807922176</a></li>
+<li><a href="https://twitter.com/passcod/status/1135828060186431488">https://twitter.com/passcod/status/1135828060186431488</a></li>
+<li><a href="https://twitter.com/passcod/status/1140893978276982784">https://twitter.com/passcod/status/1140893978276982784</a></li>
+<li><a href="https://twitter.com/passcod/status/1141698852656832513">https://twitter.com/passcod/status/1141698852656832513</a></li>
+<li><a href="https://twitter.com/passcod/status/1142367766734725120">https://twitter.com/passcod/status/1142367766734725120</a></li>
+<li><a href="https://twitter.com/passcod/status/1142376552337854464">https://twitter.com/passcod/status/1142376552337854464</a></li>
+<li><a href="https://github.com/passcod/notify/blob/main/CHANGELOG.md#500-pre0-2019-06-22">https://github.com/passcod/notify/blob/main/CHANGELOG.md#500-pre0-2019-06-22</a></li>
+<li><a href="https://twitter.com/passcod/status/1142402490068897792">https://twitter.com/passcod/status/1142402490068897792</a></li>
+<li><a href="https://github.com/octplane/fsevent-rust/pull/20">https://github.com/octplane/fsevent-rust/pull/20</a></li>
+<li><a href="https://twitter.com/passcod/status/1168188637361725442">https://twitter.com/passcod/status/1168188637361725442</a></li>
+<li><a href="https://twitter.com/passcod/status/1170626632089866240">https://twitter.com/passcod/status/1170626632089866240</a></li>
+<li><a href="https://twitter.com/passcod/status/1173931746225639424">https://twitter.com/passcod/status/1173931746225639424</a></li>
+<li><a href="https://twitter.com/passcod/status/1179116852795998208">https://twitter.com/passcod/status/1179116852795998208</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="notify-next-generation" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#notify-next-generation">Notify Next Generation</a></h2>
+        <p class="what">Experiments and development for Notify’s next&nbsp;generation.</p>
+        <time class="started" datetime="2016-12-29T13:00:00.000+13:00"
+          title="2016-12-29T13:00:00.000+13:00">Started 29 December 2016</time>
+        <time class="finished" datetime="2019-09-02T12:00:00.000+12:00"
+          title="2019-09-02T12:00:00.000+12:00">Finished 2 September 2019</time>
+      </header>
+
+      
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">I abandoned Notify and then gave it over to another&nbsp;team.</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/notify-next.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">async/await</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/notify">https://github.com/passcod/notify</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1032918089774460929">https://twitter.com/passcod/status/1032918089774460929</a></li>
+<li><a href="https://github.com/passcod/notify/blob/main/CHANGELOG.md#start-work-on-vnext-2016-12-29">https://github.com/passcod/notify/blob/main/CHANGELOG.md#start-work-on-vnext-2016-12-29</a></li>
+<li><a href="https://twitter.com/passcod/status/1049259251674148864">https://twitter.com/passcod/status/1049259251674148864</a></li>
+<li><a href="https://twitter.com/passcod/status/1168188637361725442">https://twitter.com/passcod/status/1168188637361725442</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="irish" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#irish">irish</a></h2>
+        <p class="what">Learning&nbsp;Irish</p>
+        <time class="started" datetime="2018-07-01T12:00:00.000+12:00"
+          title="2018-07-01T12:00:00.000+12:00">Started 1 July 2018</time>
+        <time class="finished" datetime="2019-09-01T12:00:00.000+12:00"
+          title="2019-09-01T12:00:00.000+12:00">Finished 1 September 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Duolingo, fanfic,&nbsp;etc.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/irish.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">duolingo</span>, <span class="with">ap_aeflwine’s fanfic</span>, <span class="with">glossika</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1063721466506539009">https://twitter.com/passcod/status/1063721466506539009</a></li>
+<li><a href="https://twitter.com/passcod/status/1081508831916548103">https://twitter.com/passcod/status/1081508831916548103</a></li>
+<li><a href="https://twitter.com/passcod/status/1082954121047470080">https://twitter.com/passcod/status/1082954121047470080</a></li>
+<li><a href="https://twitter.com/passcod/status/1086156350026014720">https://twitter.com/passcod/status/1086156350026014720</a></li>
+<li><a href="https://twitter.com/passcod/status/1087946814358241280">https://twitter.com/passcod/status/1087946814358241280</a></li>
+<li><a href="https://twitter.com/passcod/status/1088348006448017408">https://twitter.com/passcod/status/1088348006448017408</a></li>
+<li><a href="https://twitter.com/passcod/status/1089255734020268032">https://twitter.com/passcod/status/1089255734020268032</a></li>
+<li><a href="https://twitter.com/passcod/status/1099617517197094913">https://twitter.com/passcod/status/1099617517197094913</a></li>
+<li><a href="https://twitter.com/passcod/status/1108160054098710528">https://twitter.com/passcod/status/1108160054098710528</a></li>
+<li><a href="https://twitter.com/passcod/status/1109041938970238976">https://twitter.com/passcod/status/1109041938970238976</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="reupholstering-chairs" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#reupholstering-chairs">reupholstering-chairs</a></h2>
+        <p class="what">Putting some new fabric on the seat&nbsp;cushions</p>
+        <time class="started" datetime="2019-04-11T12:00:00.000+12:00"
+          title="2019-04-11T12:00:00.000+12:00">Started 11 April 2019</time>
+        <time class="finished" datetime="2019-07-01T12:00:00.000+12:00"
+          title="2019-07-01T12:00:00.000+12:00">Finished 1 July 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>I bought six chairs for pretty cheap, mostly because they're dirty and uncleanable. But the chairs themselves are okay, if not very good quality (probably made from recycled wood originally). So I'm going to reupholster&nbsp;them.</p>
+
+      <h3 class="now">Where I’m up to now:</h3>
+      <p class="now">Finish date&nbsp;approximate</p>
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/reupholstering-chairs.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">chairs</span>, <span class="with">some nice red lined polyesther fabric</span>, <span class="with">staples</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1137583518261755905">https://twitter.com/passcod/status/1137583518261755905</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="swp" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#swp">swp</a></h2>
+        <p class="what">A utility to swap two files atomically, or as close&nbsp;as</p>
+        <time class="started" datetime="2019-05-22T12:00:00.000+12:00"
+          title="2019-05-22T12:00:00.000+12:00">Started 22 May 2019</time>
+        <time class="finished" datetime="2019-06-30T12:00:00.000+12:00"
+          title="2019-06-30T12:00:00.000+12:00">Finished 30 June 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>On Linux 3.15+, the renameat2 call. On macOS, the exchangedata call. On Windows that supports Transactional NTFS, that. On WSL2 (potentially), the renameat2 call. On other platforms, a fallback method or two. In the end I decided there’s other tools and projects that do that and I’m not going to spend more time on&nbsp;it.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/swp.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/swp">https://github.com/passcod/swp</a></li>
+          </ul></dd>
+
+          
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="reasonable-kiwi" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#reasonable-kiwi">reasonable.kiwi</a></h2>
+        <p class="what">An everything-encrypted database and service of reasons for actions on&nbsp;twitter.</p>
+        <time class="started" datetime="2019-03-01T13:00:00.000+13:00"
+          title="2019-03-01T13:00:00.000+13:00">Started 1 March 2019</time>
+        <time class="finished" datetime="2019-06-30T12:00:00.000+12:00"
+          title="2019-06-30T12:00:00.000+12:00">Finished 30 June 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>This is both about this frustration with not having reasons for following, or blocking, or not following, or muting, etc... accounts on Twitter, and a challenge to design and write a service with the most amount of encryption while still being able to offer something that works. Really, the philosophy is that I don’t want to be able, as an admin operator, to read any of the reasons, or any of the people affected by the reasons, or even if possible, the social media usernames of the people using the service, at least not without some willful modifications to the service, or a trace on the process, something like that. Someone obtaining an entire copy of the database should not be able to determine anything beyond the number of users, and the number of reasons. Someone otaining that plus either the source or the binary of the service should also have that same amount of access. That means layering and chaining, and careful design thought, especially as putting all user data in one encrypted blob is not going to work efficiently with potentially tens or hundred of thousands of reasons per. Making data queryable without looking inside is an interesting challenge.<br><hr> <b>In the end,</b> I decided that instead of a public service, I would add tools to omelette. The cryptographic challenge is interesting, but the best way to keep data private is to not actually put it on someone else’s cloud,&nbsp;really.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/reasonable.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">diesel</span>, <span class="with">postgres</span>, <span class="with">sodium</span>, <span class="with">rocket</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/reasonable.kiwi">https://github.com/passcod/reasonable.kiwi</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1103222271181635589">https://twitter.com/passcod/status/1103222271181635589</a></li>
+<li><a href="https://twitter.com/passcod/status/1103960778133037056">https://twitter.com/passcod/status/1103960778133037056</a></li>
+<li><a href="https://twitter.com/passcod/status/1104185957513744384">https://twitter.com/passcod/status/1104185957513744384</a></li>
+<li><a href="https://twitter.com/passcod/status/1104256323611291648">https://twitter.com/passcod/status/1104256323611291648</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="ikea-table" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#ikea-table">ikea-table</a></h2>
+        <p class="what">Setting up an IKEA table I’d ordered a while&nbsp;ago.</p>
+        <time class="started" datetime="2019-04-29T12:00:00.000+12:00"
+          title="2019-04-29T12:00:00.000+12:00">Started 29 April 2019</time>
+        <time class="finished" datetime="2019-05-18T12:00:00.000+12:00"
+          title="2019-05-18T12:00:00.000+12:00">Finished 18 May 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>It’s an IKEA thing. How hard can it be? <i>cue laugh&nbsp;track</i></p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/ikea-table.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">jokkmokk</span>, <span class="with">lots of swearing</span>, <span class="with">some help from my brother and his partner</span>, <span class="with">and a power drill borrowed from my parents</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1122743248907149313">https://twitter.com/passcod/status/1122743248907149313</a></li>
+<li><a href="https://twitter.com/passcod/status/1123184194518016001">https://twitter.com/passcod/status/1123184194518016001</a></li>
+<li><a href="https://twitter.com/passcod/status/1127149620251914240">https://twitter.com/passcod/status/1127149620251914240</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="what" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#what">what</a></h2>
+        <p class="what">A small tool to show off what I’m working&nbsp;on.</p>
+        <time class="started" datetime="2019-04-27T12:00:00.000+12:00"
+          title="2019-04-27T12:00:00.000+12:00">Started 27 April 2019</time>
+        <time class="finished" datetime="2019-04-29T12:00:00.000+12:00"
+          title="2019-04-29T12:00:00.000+12:00">Finished 29 April 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>It’s a Node script that creates a small static site from a TOML file. On push of its git repo, a Travis build kicks off, and pushes the result to its gh_pages branch, which updates the&nbsp;site.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/what.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">node</span>, <span class="with">pnpm</span>, <span class="with">travis</span>, <span class="with">toml</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/what">https://github.com/passcod/what</a></li>
+<li><a href="https://what.passcod.name">https://what.passcod.name</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1122081844751687681">https://twitter.com/passcod/status/1122081844751687681</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="car-rainbow" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#car-rainbow">car-rainbow</a></h2>
+        <p class="what">Adorning my car with a line of&nbsp;rainbow</p>
+        <time class="started" datetime="2019-04-07T12:00:00.000+12:00"
+          title="2019-04-07T12:00:00.000+12:00">Started 7 April 2019</time>
+        <time class="finished" datetime="2019-04-27T12:00:00.000+12:00"
+          title="2019-04-27T12:00:00.000+12:00">Finished 27 April 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>The original idea was to add a decoration that would distract from the various scratches and DIY repairs on my car. I started by calculating the length I’d need, then designing and ordering about five metres of rainbow “bumper” stickers in 30cm lengths. Then I mocked up the shape of the line with masking tape, and sat on it for a few days. In the end I went with a diagonal line rather than horizontal. It needed lots of adjustments to <i>look</i> straight from a distance, while dealing with the reality of curved surfaces. Once I received the stickers, careful application took three&nbsp;afternoons.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/car-rainbow.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">stickers</span>, <span class="with">my car</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1114729273091166208">https://twitter.com/passcod/status/1114729273091166208</a></li>
+<li><a href="https://twitter.com/passcod/status/1117301877484351488">https://twitter.com/passcod/status/1117301877484351488</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="car-scratch-repair" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#car-scratch-repair">car-scratch-repair</a></h2>
+        <p class="what">Repairing a deep scratch on my&nbsp;car</p>
+        <time class="started" datetime="2019-04-03T13:00:00.000+13:00"
+          title="2019-04-03T13:00:00.000+13:00">Started 3 April 2019</time>
+        <time class="finished" datetime="2019-04-07T12:00:00.000+12:00"
+          title="2019-04-07T12:00:00.000+12:00">Finished 7 April 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>DIY: some resin to fill the gap, lots of sanding, applying colour, more sanding, clear coats, some&nbsp;buffing.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/car-scratch-repair.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">600 grit</span>, <span class="with">800 grit</span>, <span class="with">1200 grit</span>, <span class="with">clear coat</span>, <span class="with">prototyping resin</span>, <span class="with">black paint</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1113310746090172416">https://twitter.com/passcod/status/1113310746090172416</a></li>
+<li><a href="https://twitter.com/passcod/status/1114744770008498176">https://twitter.com/passcod/status/1114744770008498176</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="keycasting" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#keycasting">keycasting</a></h2>
+        <p class="what">My house key is uncopyable crap. I tried to make my&nbsp;own.</p>
+        <time class="started" datetime="2018-03-13T13:00:00.000+13:00"
+          title="2018-03-13T13:00:00.000+13:00">Started 13 March 2018</time>
+        <time class="finished" datetime="2019-03-31T13:00:00.000+13:00"
+          title="2019-03-31T13:00:00.000+13:00">Finished 31 March 2019</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Experimenting using epoxy casting in silicon moulds. In the end it wasn’t strong enough for daily use, but I learned lots and even managed to produce something&nbsp;okay!</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/keycasting.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">casting epoxy</span>, <span class="with">moulding silicon</span>, <span class="with">a dimple key</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1106760723248508928">https://twitter.com/passcod/status/1106760723248508928</a></li>
+<li><a href="https://twitter.com/passcod/status/1107512847821492225">https://twitter.com/passcod/status/1107512847821492225</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="omelette" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#omelette">omelette</a></h2>
+        <p class="what">A suite of personal archiving tools for&nbsp;tweets.</p>
+        <time class="started" datetime="2018-12-27T13:00:00.000+13:00"
+          title="2018-12-27T13:00:00.000+13:00">Started 27 December 2018</time>
+        <time class="finished" datetime="2019-01-03T13:00:00.000+13:00"
+          title="2019-01-03T13:00:00.000+13:00">Finished 3 January 2019</time>
+      </header>
+
+      
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/omelette.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">egg-mode</span>, <span class="with">reqwest</span>, <span class="with">diesel</span>, <span class="with">postgres</span></dd>
+
+          <dt>Where:</dt>
+          <dd><ul>
+            <li><a href="https://github.com/passcod/omelette">https://github.com/passcod/omelette</a></li>
+          </ul></dd>
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1078147059771822080">https://twitter.com/passcod/status/1078147059771822080</a></li>
+<li><a href="https://twitter.com/passcod/status/1078200068879015937">https://twitter.com/passcod/status/1078200068879015937</a></li>
+<li><a href="https://twitter.com/passcod/status/1078273937161650177">https://twitter.com/passcod/status/1078273937161650177</a></li>
+<li><a href="https://twitter.com/passcod/status/1078630077145862145">https://twitter.com/passcod/status/1078630077145862145</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+
+    <article id="certainly" class="done" data-commit="2df79c756eaa8397619aeb53ad1b7c7fd94fedfa">
+      <header>
+        <h2><a href="#certainly">certainly</a></h2>
+        <p class="what">A simple certificate&nbsp;tool</p>
+        <time class="started" datetime="2018-09-05T12:00:00.000+12:00"
+          title="2018-09-05T12:00:00.000+12:00">Started 5 September 2018</time>
+        <time class="finished" datetime="2018-09-06T12:00:00.000+12:00"
+          title="2018-09-06T12:00:00.000+12:00">Finished 6 September 2018</time>
+      </header>
+
+      <h3 class="how">How I’m doing that / Some details:</h3>
+      <p>Mostly just binding to OpenSSL and creating/inspecting certificates with the least user interaction possible. There are other tools that take a similar approach but they either do too little (only self-signed certs, no self-CA-signed ones) or too much (install themselves by default into various system certificate stores). Plus it was an interesting way to learn more about the OpenSSL APIs and&nbsp;certificates.</p>
+
+      
+
+      <footer>
+        <dl>
+          <dt>Last modified:</dt>
+          <dd>
+            <time datetime="2020-08-26T20:50:58.000+12:00" title="2020-08-26T20:50:58.000+12:00">26 August 2020, ~20:50 NZ</time>
+            (<a href="https://github.com/passcod/what/commits/2df79c756eaa8397619aeb53ad1b7c7fd94fedfa/done/certainly.toml">history</a>)
+          </dd>
+
+          <dt>With:</dt>
+          <dd class="with"><span class="with">rust</span>, <span class="with">openssl</span></dd>
+
+          
+
+          <dt>Media:</dt>
+          <dd><ul>
+            <li><a href="https://twitter.com/passcod/status/1037261932963590145">https://twitter.com/passcod/status/1037261932963590145</a></li>
+<li><a href="https://twitter.com/passcod/status/1037534193603887104">https://twitter.com/passcod/status/1037534193603887104</a></li>
+<li><a href="https://twitter.com/passcod/status/1041992168523431939">https://twitter.com/passcod/status/1041992168523431939</a></li>
+<li><a href="https://twitter.com/passcod/status/1049530800146792449">https://twitter.com/passcod/status/1049530800146792449</a></li>
+<li><a href="https://twitter.com/passcod/status/1172313679749992448">https://twitter.com/passcod/status/1172313679749992448</a></li>
+<li><a href="https://twitter.com/passcod/status/1172807287435489280">https://twitter.com/passcod/status/1172807287435489280</a></li>
+<li><a href="https://twitter.com/passcod/status/1172999171323748352">https://twitter.com/passcod/status/1172999171323748352</a></li>
+<li><a href="https://twitter.com/passcod/status/1173051284359745536">https://twitter.com/passcod/status/1173051284359745536</a></li>
+<li><a href="https://twitter.com/passcod/status/1173557132395810816">https://twitter.com/passcod/status/1173557132395810816</a></li>
+          </ul></dd>
+        </dl>
+      </footer>
+    </article>
+  
+  </body>
+</html>
