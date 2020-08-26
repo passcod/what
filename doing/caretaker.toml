@@ -1,9 +1,9 @@
-name = "The Caretaker Model"
-what = "A different contribution model and workflow for open software projects that redistributes work more fairly, operates at higher trust, and allows projects to survive and grow even if the creator is mostly checked out, with very little effort required on their part."
-how = "I'm writing the text of the model and making a website that can be linked to for contributors to quickly get information about what they can do and how, in addition to the long form description."
+name = "The Caretaker System"
+what = "A “addon” contribution system for open software projects that trades higher trust for less effort on the maintainers parts, allowing projects to survive and grow even if the creator is mostly checked out."
+how = "I'm writing the text of the system and making a website that can be linked to for contributors to quickly get information about what they can do and how, in addition to the long form description."
 with = ["words", "jekyll"]
 started = "2020-05-16"
-now = "Halfway done with the initial draft."
+now = "Halfway done with the initial draft. Renamed from model to system."
 where = [
   "https://caretaker.passcod.name",
   "https://github.com/passcod/caretaker",
